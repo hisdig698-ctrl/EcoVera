@@ -148,7 +148,7 @@ export function ProductGrid() {
   const gridRef = useRef<HTMLDivElement>(null)
   const headerRef = useRef<HTMLDivElement>(null)
   const { addItem } = useCart()
-  
+
   const filteredProducts = products.filter(product => product.category === selectedCategory)
 
   const handleCategoryChange = (category: Category) => {
@@ -216,7 +216,7 @@ export function ProductGrid() {
           <span className={`text-sm tracking-[0.3em] uppercase text-primary mb-4 block ${headerVisible ? 'animate-blur-in opacity-0' : 'opacity-0'}`} style={headerVisible ? { animationDelay: '0.2s', animationFillMode: 'forwards' } : {}}>
             Our Collection
           </span>
-          <h2 className={`font-serif leading-tight text-foreground mb-4 text-balance text-7xl ${headerVisible ? 'animate-blur-in opacity-0' : 'opacity-0'}`} style={headerVisible ? { animationDelay: '0.4s', animationFillMode: 'forwards' } : {}}>
+          <h2 className={`font-serif leading-tight text-foreground mb-4 text-balance text-4xl sm:text-5xl md:text-7xl ${headerVisible ? 'animate-blur-in opacity-0' : 'opacity-0'}`} style={headerVisible ? { animationDelay: '0.4s', animationFillMode: 'forwards' } : {}}>
             Gentle essentials
           </h2>
           <p className={`text-lg text-muted-foreground max-w-md mx-auto ${headerVisible ? 'animate-blur-in opacity-0' : 'opacity-0'}`} style={headerVisible ? { animationDelay: '0.6s', animationFillMode: 'forwards' } : {}}>
@@ -240,11 +240,10 @@ export function ProductGrid() {
                 key={category.value}
                 type="button"
                 onClick={() => handleCategoryChange(category.value)}
-                className={`relative z-10 px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
-                  selectedCategory === category.value
-                    ? "text-background"
-                    : "text-muted-foreground hover:text-foreground"
-                }`}
+                className={`relative z-10 px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === category.value
+                  ? "text-background"
+                  : "text-muted-foreground hover:text-foreground"
+                  }`}
               >
                 {category.label}
               </button>
@@ -253,7 +252,7 @@ export function ProductGrid() {
         </div>
 
         {/* Product Grid */}
-        <div 
+        <div
           ref={gridRef}
           className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
         >
@@ -261,9 +260,8 @@ export function ProductGrid() {
             <Link
               key={`${selectedCategory}-${product.id}`}
               href={`/product/${product.id}`}
-              className={`group transition-all duration-500 ease-out ${
-                isVisible && !isTransitioning ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
-              }`}
+              className={`group transition-all duration-500 ease-out ${isVisible && !isTransitioning ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+                }`}
               style={{ transitionDelay: isTransitioning ? '0ms' : `${index * 80}ms` }}
             >
               <div className="bg-background rounded-3xl overflow-hidden ecovera-shadow ecovera-transition group-hover:scale-[1.02]">
@@ -278,13 +276,12 @@ export function ProductGrid() {
                   {/* Badge */}
                   {product.badge && (
                     <span
-                      className={`absolute top-4 left-4 px-3 py-1 rounded-full text-xs tracking-wide bg-white text-black ${
-                        product.badge === "Sale"
-                          ? "bg-destructive/10 text-destructive"
-                          : product.badge === "New"
-                          ? "bg-primary/10 text-primary"
+                      className={`absolute top-4 left-4 px-3 py-1 rounded-full text-xs tracking-wide bg-primary text-primary-foreground ${product.badge === "Sale"
+                        ? "bg-destructive text-destructive-foreground"
+                        : product.badge === "New"
+                          ? "bg-primary text-primary-foreground"
                           : "bg-accent text-accent-foreground"
-                      }`}
+                        }`}
                     >
                       {product.badge}
                     </span>
@@ -315,10 +312,10 @@ export function ProductGrid() {
                   <h3 className="font-serif text-lg text-foreground mb-1">{product.name}</h3>
                   <p className="text-sm text-muted-foreground mb-3">{product.description}</p>
                   <div className="flex items-center gap-2">
-                    <span className="font-medium text-foreground">${product.price}</span>
+                    <span className="font-medium text-foreground">Rs. {product.price}</span>
                     {product.originalPrice && (
                       <span className="text-sm text-muted-foreground line-through">
-                        ${product.originalPrice}
+                        Rs. {product.originalPrice}
                       </span>
                     )}
                   </div>

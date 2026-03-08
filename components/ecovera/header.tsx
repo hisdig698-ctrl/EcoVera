@@ -1,18 +1,29 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import Link from "next/link"
-import { Menu, X, ShoppingBag, Search, User } from "lucide-react"
+import { Menu, X, ShoppingBag, Search, User, Moon, Sun } from "lucide-react"
+import { useTheme } from "next-themes"
 import { CartDrawer } from "./cart-drawer"
 import { useCart } from "./cart-context"
+import { SearchOverlay } from "./search-overlay"
+import { useLanguage } from "./language-context"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isSearchOpen, setIsSearchOpen] = useState(false)
   const { setIsOpen, itemCount } = useCart()
+  const { language, setLanguage, t } = useLanguage()
+  const { theme, setTheme, resolvedTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 px-4 pt-4">
-      <nav className="max-w-7xl mx-auto px-6 lg:px-8 backdrop-blur-md rounded-lg py-0 my-0 animate-scale-fade-in bg-[rgba(255,255,255,0.4)] border border-[rgba(255,255,255,0.32)]" style={{ boxShadow: 'rgba(0, 0, 0, 0.1) 0px 10px 50px' }}>
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 backdrop-blur-md rounded-lg py-0 my-0 animate-scale-fade-in bg-[rgba(255,255,255,0.4)] border border-[rgba(255,255,255,0.32)]" style={{ boxShadow: 'rgba(0, 0, 0, 0.1) 0px 10px 50px' }}>
         <div className="flex items-center justify-between h-[68px]">
           {/* Mobile menu button */}
           <button
@@ -30,33 +41,53 @@ export function Header() {
               href="/shop"
               className="text-sm tracking-wide text-foreground/70 hover:text-foreground ecovera-transition"
             >
-              Shop
+              {t('nav.shop')}
             </Link>
             <Link
-              href="/"
+              href="/about"
               className="text-sm tracking-wide text-foreground/70 hover:text-foreground ecovera-transition"
             >
-              About
+              {t('nav.about')}
             </Link>
             <Link
-              href="/"
+              href="/ingredients"
               className="text-sm tracking-wide text-foreground/70 hover:text-foreground ecovera-transition"
             >
-              Ingredients
+              {t('nav.ingredients')}
             </Link>
           </div>
 
           {/* Logo */}
           <Link href="/" className="absolute left-1/2 -translate-x-1/2">
-            <h1 className="font-serif text-3xl tracking-wider text-foreground">EcoVera</h1>
+            <h1 className="font-serif text-2xl sm:text-3xl tracking-wider text-foreground">EcoVera</h1>
           </Link>
 
           {/* Right Actions */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 sm:gap-4">
+            <button
+              onClick={() => setLanguage(language === 'en' ? 'ne' : 'en')}
+              className="text-xs font-semibold tracking-widest uppercase text-foreground/70 hover:text-foreground ecovera-transition px-2"
+              aria-label="Toggle language"
+            >
+              {language === 'en' ? 'EN' : 'NE'}
+            </button>
+            <button
+              type="button"
+              onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+              className="p-2 text-foreground/70 hover:text-foreground ecovera-transition"
+              aria-label="Toggle theme"
+            >
+              {mounted && resolvedTheme === "dark" ? (
+                <Sun className="w-5 h-5" />
+              ) : (
+                <Moon className="w-5 h-5" />
+              )}
+            </button>
             <button
               type="button"
               className="p-2 text-foreground/70 hover:text-foreground ecovera-transition"
               aria-label="Search"
+              onClick={() => setIsSearchOpen(true)}
             >
               <Search className="w-5 h-5" />
             </button>
@@ -84,36 +115,48 @@ export function Header() {
         </div>
 
         <CartDrawer />
+        <SearchOverlay isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
 
         {/* Mobile Navigation */}
         <div
-          className={`lg:hidden overflow-hidden ecovera-transition ${isMenuOpen ? "max-h-64 pb-6" : "max-h-0"
+          className={`lg:hidden overflow-hidden ecovera-transition ${isMenuOpen ? "max-h-80 pb-6" : "max-h-0"
             }`}
         >
           <div className="flex flex-col gap-4 pt-4 border-t border-border/50">
             <Link
               href="/shop"
               className="text-sm tracking-wide text-foreground/70 hover:text-foreground ecovera-transition"
+              onClick={() => setIsMenuOpen(false)}
             >
-              Shop
+              {t('nav.shop')}
             </Link>
             <Link
-              href="/"
+              href="/about"
               className="text-sm tracking-wide text-foreground/70 hover:text-foreground ecovera-transition"
+              onClick={() => setIsMenuOpen(false)}
             >
-              About
+              {t('nav.about')}
             </Link>
             <Link
-              href="/"
+              href="/ingredients"
               className="text-sm tracking-wide text-foreground/70 hover:text-foreground ecovera-transition"
+              onClick={() => setIsMenuOpen(false)}
             >
-              Ingredients
+              {t('nav.ingredients')}
             </Link>
             <Link
-              href="/"
+              href="/contact"
               className="text-sm tracking-wide text-foreground/70 hover:text-foreground ecovera-transition"
+              onClick={() => setIsMenuOpen(false)}
             >
-              Account
+              {t('nav.contact')}
+            </Link>
+            <Link
+              href="/account"
+              className="text-sm tracking-wide text-foreground/70 hover:text-foreground ecovera-transition"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {t('nav.account')}
             </Link>
           </div>
         </div>

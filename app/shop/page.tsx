@@ -1,11 +1,13 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useRef, Suspense } from "react"
 import Image from "next/image"
 import Link from "next/link"
+import { useSearchParams } from "next/navigation"
 import { ShoppingBag, SlidersHorizontal, X } from "lucide-react"
 import { Header } from "@/components/ecovera/header"
 import { Footer } from "@/components/ecovera/footer"
+import { useCart } from "@/components/ecovera/cart-context"
 
 const products = [
   // Serums
@@ -131,7 +133,7 @@ const products = [
     badge: "Bestseller",
     category: "oils"
   },
-  // Masks & Toners (original products)
+  // Masks & Toners
   {
     id: "glow-mask",
     name: "Glow Mask",
@@ -157,7 +159,27 @@ const products = [
 const categories = ["all", "serums", "moisturizers", "cleansers", "oils", "masks", "toners"]
 
 export default function ShopPage() {
-  const [selectedCategory, setSelectedCategory] = useState("all")
+  return (
+    <Suspense fallback={
+      <main className="min-h-screen">
+        <Header />
+        <div className="pt-28 pb-20 flex items-center justify-center">
+          <div className="animate-pulse text-muted-foreground">Loading...</div>
+        </div>
+        <Footer />
+      </main>
+    }>
+      <ShopContent />
+    </Suspense>
+  )
+}
+
+function ShopContent() {
+  const searchParams = useSearchParams()
+  const initialCategory = searchParams.get("category") || "all"
+  const [selectedCategory, setSelectedCategory] = useState(
+    categories.includes(initialCategory) ? initialCategory : "all"
+  )
   const [showFilters, setShowFilters] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
   const gridRef = useRef<HTMLDivElement>(null)
@@ -197,18 +219,18 @@ export default function ShopPage() {
   return (
     <main className="min-h-screen">
       <Header />
-      
+
       <div className="pt-28 pb-20">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-12">
             <span className="text-sm tracking-[0.3em] uppercase text-primary mb-4 block">
               Our Collection
             </span>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-4 text-balance">
+            <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-foreground mb-4 text-balance">
               Shop All Products
             </h1>
-            <p className="text-lg text-muted-foreground max-w-md mx-auto">
+            <p className="text-base sm:text-lg text-muted-foreground max-w-md mx-auto">
               Discover our complete range of natural skincare essentials
             </p>
           </div>
@@ -225,17 +247,16 @@ export default function ShopPage() {
             </button>
 
             {/* Desktop Categories */}
-            <div className="hidden lg:flex items-center gap-2">
+            <div className="hidden lg:flex items-center gap-2 flex-wrap">
               {categories.map((category) => (
                 <button
                   key={category}
                   type="button"
                   onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-full text-sm capitalize ecovera-transition bg-popover ${
-                    selectedCategory === category
-                      ? "bg-primary text-primary-foreground"
-                      : "bg-card text-foreground/70 hover:text-foreground ecovera-shadow"
-                  }`}
+                  className={`px-4 py-2 rounded-full text-sm capitalize ecovera-transition bg-popover ${selectedCategory === category
+                    ? "bg-primary text-primary-foreground"
+                    : "bg-card text-foreground/70 hover:text-foreground ecovera-shadow"
+                    }`}
                 >
                   {category}
                 </button>
@@ -270,11 +291,10 @@ export default function ShopPage() {
                         setSelectedCategory(category)
                         setShowFilters(false)
                       }}
-                      className={`w-full px-6 py-4 rounded-2xl text-left capitalize ecovera-transition ${
-                        selectedCategory === category
-                          ? "bg-primary text-primary-foreground"
-                          : "bg-card text-foreground ecovera-shadow"
-                      }`}
+                      className={`w-full px-6 py-4 rounded-2xl text-left capitalize ecovera-transition ${selectedCategory === category
+                        ? "bg-primary text-primary-foreground"
+                        : "bg-card text-foreground ecovera-shadow"
+                        }`}
                     >
                       {category}
                     </button>
@@ -285,12 +305,12 @@ export default function ShopPage() {
           )}
 
           {/* Product Grid */}
-          <div 
+          <div
             ref={gridRef}
-            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
           >
             {filteredProducts.map((product, index) => (
-              <ProductCard 
+              <ProductCard
                 key={product.id}
                 product={product}
                 index={index}
@@ -306,54 +326,51 @@ export default function ShopPage() {
   )
 }
 
-function ProductCard({ 
-  product, 
-  index, 
-  isVisible 
-}: { 
+function ProductCard({
+  product,
+  index,
+  isVisible
+}: {
   product: typeof products[0]
   index: number
   isVisible: boolean
 }) {
   const [imageLoaded, setImageLoaded] = useState(false)
+  const { addItem } = useCart()
 
   return (
     <Link
       href={`/product/${product.id}`}
-      className={`group transition-all duration-700 ease-out ${
-        isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
-      }`}
+      className={`group transition-all duration-700 ease-out ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+        }`}
       style={{ transitionDelay: `${index * 80}ms` }}
     >
-      <div className="bg-card rounded-3xl overflow-hidden ecovera-shadow ecovera-transition group-hover:scale-[1.02]">
+      <div className="bg-card rounded-2xl sm:rounded-3xl overflow-hidden ecovera-shadow ecovera-transition group-hover:scale-[1.02]">
         {/* Image */}
         <div className="relative aspect-square bg-muted overflow-hidden">
           {/* Skeleton */}
-          <div 
-            className={`absolute inset-0 bg-gradient-to-br from-muted via-muted/50 to-muted animate-pulse transition-opacity duration-500 ${
-              imageLoaded ? 'opacity-0' : 'opacity-100'
-            }`}
+          <div
+            className={`absolute inset-0 bg-gradient-to-br from-muted via-muted/50 to-muted animate-pulse transition-opacity duration-500 ${imageLoaded ? 'opacity-0' : 'opacity-100'
+              }`}
           />
-          
+
           <Image
             src={product.image || "/placeholder.svg"}
             alt={product.name}
             fill
-            className={`object-cover ecovera-transition group-hover:scale-105 transition-opacity duration-500 ${
-              imageLoaded ? 'opacity-100' : 'opacity-0'
-            }`}
+            className={`object-cover ecovera-transition group-hover:scale-105 transition-opacity duration-500 ${imageLoaded ? 'opacity-100' : 'opacity-0'
+              }`}
             onLoad={() => setImageLoaded(true)}
           />
           {/* Badge */}
           {product.badge && (
             <span
-              className={`absolute top-4 left-4 px-3 py-1 rounded-full text-xs tracking-wide ${
-                product.badge === "Sale"
-                  ? "bg-destructive/10 text-destructive"
-                  : product.badge === "New"
+              className={`absolute top-3 left-3 sm:top-4 sm:left-4 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full text-[10px] sm:text-xs tracking-wide ${product.badge === "Sale"
+                ? "bg-destructive/10 text-destructive"
+                : product.badge === "New"
                   ? "bg-primary/10 text-primary"
                   : "bg-accent text-accent-foreground"
-              }`}
+                }`}
             >
               {product.badge}
             </span>
@@ -361,25 +378,33 @@ function ProductCard({
           {/* Quick add button */}
           <button
             type="button"
-            className="absolute bottom-4 right-4 w-12 h-12 rounded-full bg-background/90 backdrop-blur-sm flex items-center justify-center opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 ecovera-transition ecovera-shadow"
+            className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-background/90 backdrop-blur-sm flex items-center justify-center opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 ecovera-transition ecovera-shadow"
             onClick={(e) => {
               e.preventDefault()
+              e.stopPropagation()
+              addItem({
+                id: product.id,
+                name: product.name,
+                description: product.description,
+                price: product.price,
+                image: product.image,
+              })
             }}
             aria-label="Add to cart"
           >
-            <ShoppingBag className="w-5 h-5 text-foreground" />
+            <ShoppingBag className="w-4 h-4 sm:w-5 sm:h-5 text-foreground" />
           </button>
         </div>
 
         {/* Info */}
-        <div className="p-6">
-          <h3 className="font-serif text-xl text-foreground mb-1">{product.name}</h3>
-          <p className="text-sm text-muted-foreground mb-4">{product.description}</p>
+        <div className="p-4 sm:p-6">
+          <h3 className="font-serif text-base sm:text-xl text-foreground mb-1">{product.name}</h3>
+          <p className="text-xs sm:text-sm text-muted-foreground mb-3 sm:mb-4">{product.description}</p>
           <div className="flex items-center gap-2">
-            <span className="text-lg font-medium text-foreground">${product.price}</span>
+            <span className="text-base sm:text-lg font-medium text-foreground">Rs. {product.price}</span>
             {product.originalPrice && (
-              <span className="text-sm text-muted-foreground line-through">
-                ${product.originalPrice}
+              <span className="text-xs sm:text-sm text-muted-foreground line-through">
+                Rs. {product.originalPrice}
               </span>
             )}
           </div>

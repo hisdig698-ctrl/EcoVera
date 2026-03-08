@@ -109,20 +109,9 @@ export function FeatureSection() {
               className="object-cover"
             />
             {/* Overlay Card */}
-            <div className="absolute bottom-8 left-8 right-8 bg-white p-6 shadow-lg rounded-xl">
-              <div className="flex items-start gap-3">
-                <div className="flex-shrink-0">
-
-                </div>
-                <div>
-                  <h3 className="text-xl text-foreground mb-2 font-medium">
-                    100% <span className="">Plant-Based</span>
-                  </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Formulated exclusively with botanical ingredients and natural plant extracts.
-                  </p>
-                </div>
-              </div>
+            <div className="absolute bottom-8 left-8 right-8 bg-card p-6 shadow-lg rounded-xl">
+              <h3 className="font-serif text-2xl text-foreground mb-2">Award-Winning Formulas</h3>
+              <p className="text-muted-foreground text-sm">Voted Best Natural Skincare 2026</p>
             </div>
           </div>
 
@@ -223,7 +212,7 @@ export function FeatureSection() {
             <span className={`text-sm tracking-[0.3em] uppercase text-primary mb-4 block ${headerVisible ? 'animate-blur-in opacity-0' : 'opacity-0'}`} style={headerVisible ? { animationDelay: '0.2s', animationFillMode: 'forwards' } : {}}>
               Why EcoVera
             </span>
-            <h2 className={`font-serif text-4xl leading-tight text-foreground mb-6 text-balance md:text-7xl ${headerVisible ? 'animate-blur-in opacity-0' : 'opacity-0'}`} style={headerVisible ? { animationDelay: '0.4s', animationFillMode: 'forwards' } : {}}>
+            <h2 className={`font-serif text-4xl leading-tight text-foreground mb-6 text-balance md:text-5xl lg:text-7xl ${headerVisible ? 'animate-blur-in opacity-0' : 'opacity-0'}`} style={headerVisible ? { animationDelay: '0.4s', animationFillMode: 'forwards' } : {}}>
               Care that breathes.
             </h2>
             <p className={`text-lg text-muted-foreground leading-relaxed mb-10 max-w-md ${headerVisible ? 'animate-blur-in opacity-0' : 'opacity-0'}`} style={headerVisible ? { animationDelay: '0.6s', animationFillMode: 'forwards' } : {}}>
@@ -236,7 +225,7 @@ export function FeatureSection() {
               {features.map((feature) => (
                 <div
                   key={feature.title}
-                  className="group p-5 ecovera-transition hover:scale-[1.02] rounded-md bg-white"
+                  className="group p-5 ecovera-transition hover:scale-[1.02] rounded-md bg-card"
                 >
                   <div className="inline-flex items-center justify-center w-10 h-10 rounded-full mb-3 group-hover:bg-primary/20 ecovera-transition bg-stone-50">
                     <feature.icon className="w-5 h-5 text-primary" />
