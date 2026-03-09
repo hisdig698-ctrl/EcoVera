@@ -1,10 +1,11 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useRef, useCallback } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { ShoppingBag } from "lucide-react"
 import { useCart } from "./cart-context"
+import { useLanguage } from "./language-context"
 
 type Category = "wellness" | "cosmetics" | "essential-oils"
 
@@ -12,63 +13,69 @@ const products = [
   // Wellness
   {
     id: "hand-sanitizer",
-    name: "Titepati Hand Sanitizer",
-    description: "Kills 99.9% of germs with natural extracts",
+    name: { en: "Titepati Hand Sanitizer", ne: "टिटेपाटी ह्यान्ड स्यानिटाइजर" },
+    description: { en: "Kills 99.9% of germs with natural extracts", ne: "प्राकृतिक अर्कले ९९.९% जीवाणु मार्छ" },
     price: 15,
     originalPrice: 18,
     image: "/images/products/hand-sanitizer.jpg",
-    badge: "Bestseller",
+    badgeKey: "products.bestseller",
     category: "wellness" as Category
   },
   {
     id: "mugwort-incense",
-    name: "Tibetan Mugwort Incense",
-    description: "Traditional herbal incense for cleansing",
+    name: { en: "Tibetan Mugwort Incense", ne: "तिब्बती मगवर्ट धूप" },
+    description: { en: "Traditional herbal incense for cleansing", ne: "सफाइको लागि परम्परागत जडीबुटी धूप" },
     price: 25,
     originalPrice: null,
     image: "/images/products/mugwort-incense.jpg",
-    badge: "New",
+    badgeKey: "products.new",
     category: "wellness" as Category
   },
   // Essential Oils
   {
     id: "mugwort-oil",
-    name: "Mugwort Essential Oil",
-    description: "Pure Artemisia Vulgaris extract (50ml)",
+    name: { en: "Mugwort Essential Oil", ne: "मगवर्ट एसेन्सियल तेल" },
+    description: { en: "Pure Artemisia Vulgaris extract (50ml)", ne: "शुद्ध आर्टेमिसिया भल्गारिस अर्क (५०मिलि)" },
     price: 45,
     originalPrice: null,
     image: "/images/products/mugwort-oil.jpg",
-    badge: "Premium",
+    badgeKey: "products.premium",
     category: "essential-oils" as Category
   },
   // Cosmetics
   {
     id: "titepati-soap",
-    name: "Titepati Skin Treatment Soap",
-    description: "Ayurvedic Okhati therapeutic bar",
+    name: { en: "Titepati Skin Treatment Soap", ne: "टिटेपाटी छाला उपचार साबुन" },
+    description: { en: "Ayurvedic Okhati therapeutic bar", ne: "आयुर्वेदिक ओखति उपचार साबुन" },
     price: 12,
     originalPrice: null,
     image: "/images/products/titepati-soap.jpg",
-    badge: "Bestseller",
+    badgeKey: "products.bestseller",
     category: "cosmetics" as Category
   },
   {
     id: "herbal-cosmetics-set",
-    name: "Titepati Herbal Cosmetics Set",
-    description: "Complete glow skin toner, face wash, and moisturizer bundle",
+    name: { en: "Titepati Herbal Cosmetics Set", ne: "टिटेपाटी जडीबुटी सौन्दर्य सेट" },
+    description: { en: "Complete glow skin toner, face wash, and moisturizer bundle", ne: "पूर्ण ग्लो स्किन टोनर, फेस वाश, र मोइस्चराइजर बन्डल" },
     price: 85,
     originalPrice: 110,
     image: "/images/products/herbal-cosmetics.jpg",
-    badge: "Sale",
+    badgeKey: "products.sale",
     category: "cosmetics" as Category
   }
 ]
 
-const categories = [
-  { value: "wellness" as Category, label: "Wellness & Health" },
-  { value: "essential-oils" as Category, label: "Essential Oils" },
-  { value: "cosmetics" as Category, label: "Cosmetics" }
+const categoryKeys: { value: Category; labelKey: string }[] = [
+  { value: "wellness", labelKey: "products.cat_wellness" },
+  { value: "essential-oils", labelKey: "products.cat_oils" },
+  { value: "cosmetics", labelKey: "products.cat_cosmetics" }
 ]
+
+// Helper: convert digits to Nepali
+function toNepaliDigits(n: number): string {
+  const nepaliDigits = ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९']
+  return n.toString().split('').map(d => nepaliDigits[parseInt(d)] || d).join('')
+}
 
 export function ProductGrid() {
   const [selectedCategory, setSelectedCategory] = useState<Category>("wellness")
@@ -78,6 +85,35 @@ export function ProductGrid() {
   const gridRef = useRef<HTMLDivElement>(null)
   const headerRef = useRef<HTMLDivElement>(null)
   const { addItem } = useCart()
+  const { language, t } = useLanguage()
+
+  // Dynamic tab indicator refs
+  const tabRefs = useRef<(HTMLButtonElement | null)[]>([])
+  const [indicatorStyle, setIndicatorStyle] = useState<{ left: number; width: number }>({ left: 0, width: 0 })
+
+  const updateIndicator = useCallback(() => {
+    const idx = categoryKeys.findIndex(c => c.value === selectedCategory)
+    const btn = tabRefs.current[idx]
+    if (btn) {
+      const parent = btn.parentElement
+      if (parent) {
+        setIndicatorStyle({
+          left: btn.offsetLeft,
+          width: btn.offsetWidth
+        })
+      }
+    }
+  }, [selectedCategory])
+
+  useEffect(() => {
+    updateIndicator()
+  }, [updateIndicator, language])
+
+  // Also update on resize
+  useEffect(() => {
+    window.addEventListener('resize', updateIndicator)
+    return () => window.removeEventListener('resize', updateIndicator)
+  }, [updateIndicator])
 
   const filteredProducts = products.filter(product => product.category === selectedCategory)
 
@@ -138,44 +174,47 @@ export function ProductGrid() {
     }
   }, [])
 
+  const formatPrice = (price: number) => {
+    if (language === 'ne') return `रु. ${toNepaliDigits(price)}`
+    return `Rs. ${price}`
+  }
+
   return (
     <section className="py-24 bg-card">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div ref={headerRef} className="text-center mb-16">
           <span className={`text-sm tracking-[0.3em] uppercase text-primary mb-4 block ${headerVisible ? 'animate-blur-in opacity-0' : 'opacity-0'}`} style={headerVisible ? { animationDelay: '0.2s', animationFillMode: 'forwards' } : {}}>
-            Our Collection
+            {t("products.collection_label")}
           </span>
           <h2 className={`font-serif leading-tight text-foreground mb-4 text-balance text-4xl sm:text-5xl md:text-7xl ${headerVisible ? 'animate-blur-in opacity-0' : 'opacity-0'}`} style={headerVisible ? { animationDelay: '0.4s', animationFillMode: 'forwards' } : {}}>
-            Gentle essentials
+            {t("products.title")}
           </h2>
           <p className={`text-lg text-muted-foreground max-w-md mx-auto ${headerVisible ? 'animate-blur-in opacity-0' : 'opacity-0'}`} style={headerVisible ? { animationDelay: '0.6s', animationFillMode: 'forwards' } : {}}>
-            Thoughtfully crafted products for your daily skincare ritual
+            {t("products.subtitle")}
           </p>
         </div>
 
         {/* Segmented Control */}
         <div className="flex justify-start sm:justify-center mb-12 overflow-x-auto pb-4 sm:pb-0 scrollbar-hide -mx-6 px-6 sm:mx-0 sm:px-0">
           <div className="inline-flex bg-background rounded-full p-1 gap-1 relative min-w-max">
-            {/* Animated background slide */}
+            {/* Animated background slide — dynamically positioned */}
             <div
-              className={`absolute top-1 bottom-1 bg-foreground rounded-full transition-all duration-300 ease-out shadow-sm
-                ${selectedCategory === 'wellness' ? 'left-1 w-[160px]' : ''}
-                ${selectedCategory === 'essential-oils' ? 'left-[161px] w-[130px]' : ''}
-                ${selectedCategory === 'cosmetics' ? 'left-[291px] w-[105px]' : ''}
-              `}
+              className="absolute top-1 bottom-1 bg-foreground rounded-full transition-all duration-300 ease-out shadow-sm"
+              style={{ left: indicatorStyle.left, width: indicatorStyle.width }}
             />
-            {categories.map((category) => (
+            {categoryKeys.map((category, idx) => (
               <button
                 key={category.value}
+                ref={(el) => { tabRefs.current[idx] = el }}
                 type="button"
                 onClick={() => handleCategoryChange(category.value)}
-                className={`relative z-10 px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === category.value
+                className={`relative z-10 px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap ${selectedCategory === category.value
                   ? "text-background"
                   : "text-muted-foreground hover:text-foreground"
                   }`}
               >
-                {category.label}
+                {t(category.labelKey)}
               </button>
             ))}
           </div>
@@ -199,21 +238,21 @@ export function ProductGrid() {
                 <div className="relative aspect-square bg-muted overflow-hidden">
                   <Image
                     src={product.image || "/placeholder.svg"}
-                    alt={product.name}
+                    alt={product.name[language]}
                     fill
                     className="object-cover ecovera-transition group-hover:scale-105"
                   />
                   {/* Badge */}
-                  {product.badge && (
+                  {product.badgeKey && (
                     <span
-                      className={`absolute top-4 left-4 px-3 py-1 rounded-full text-xs tracking-wide bg-primary text-primary-foreground ${product.badge === "Sale"
+                      className={`absolute top-4 left-4 px-3 py-1 rounded-full text-xs tracking-wide bg-primary text-primary-foreground ${product.badgeKey === "products.sale"
                         ? "bg-destructive text-destructive-foreground"
-                        : product.badge === "New"
+                        : product.badgeKey === "products.new"
                           ? "bg-primary text-primary-foreground"
                           : "bg-accent text-accent-foreground"
                         }`}
                     >
-                      {product.badge}
+                      {t(product.badgeKey)}
                     </span>
                   )}
                   {/* Quick add button */}
@@ -225,13 +264,13 @@ export function ProductGrid() {
                       e.stopPropagation()
                       addItem({
                         id: product.id,
-                        name: product.name,
-                        description: product.description,
+                        name: product.name[language],
+                        description: product.description[language],
                         price: product.price,
                         image: product.image
                       })
                     }}
-                    aria-label="Add to cart"
+                    aria-label={t("product.add_to_cart")}
                   >
                     <ShoppingBag className="w-4 h-4 text-foreground" />
                   </button>
@@ -239,13 +278,13 @@ export function ProductGrid() {
 
                 {/* Info */}
                 <div className="p-5">
-                  <h3 className="font-serif text-lg text-foreground mb-1">{product.name}</h3>
-                  <p className="text-sm text-muted-foreground mb-3">{product.description}</p>
+                  <h3 className="font-serif text-lg text-foreground mb-1">{product.name[language]}</h3>
+                  <p className="text-sm text-muted-foreground mb-3">{product.description[language]}</p>
                   <div className="flex items-center gap-2">
-                    <span className="font-medium text-foreground">Rs. {product.price}</span>
+                    <span className="font-medium text-foreground">{formatPrice(product.price)}</span>
                     {product.originalPrice && (
                       <span className="text-sm text-muted-foreground line-through">
-                        Rs. {product.originalPrice}
+                        {formatPrice(product.originalPrice)}
                       </span>
                     )}
                   </div>
@@ -261,7 +300,7 @@ export function ProductGrid() {
             href="/shop"
             className="inline-flex items-center justify-center gap-2 bg-transparent border border-foreground/20 text-foreground px-8 py-4 rounded-full text-sm tracking-wide ecovera-transition hover:bg-foreground/5"
           >
-            View All Products
+            {t("products.view_all")}
           </Link>
         </div>
       </div>
