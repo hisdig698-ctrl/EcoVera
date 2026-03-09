@@ -21,27 +21,10 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'Ecovera — Natural Skincare',
-  description: 'Premium natural skincare and body care products. Glow gently with Ecovera.',
+  title: 'EcoVera Artemisia™ BioSolution',
+  description: 'A sustainable agribusiness transforming underutilized rural resources into premium, health-oriented Artemisia products.',
   generator: 'v0.app',
   keywords: ['skincare', 'natural', 'organic', 'beauty', 'body care', 'cruelty-free'],
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
-  },
 }
 
 export const viewport: Viewport = {

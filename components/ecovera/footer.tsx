@@ -7,9 +7,9 @@ import { useLanguage } from "./language-context"
 const getFooterLinks = (t: (key: string) => string) => ({
   shop: [
     { name: t("footer.all_products"), href: "/shop" },
-    { name: t("footer.serums"), href: "/shop?category=serums" },
-    { name: t("footer.moisturizers"), href: "/shop?category=moisturizers" },
-    { name: t("footer.cleansers"), href: "/shop?category=cleansers" }
+    { name: t("footer.wellness"), href: "/shop?category=wellness" },
+    { name: t("footer.essential_oils"), href: "/shop?category=essential-oils" },
+    { name: t("footer.cosmetics"), href: "/shop?category=cosmetics" }
   ],
   about: [
     { name: t("footer.our_story"), href: "/about" },
@@ -101,7 +101,7 @@ export function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm text-muted-foreground hover:text-foreground ecovera-transition"
+                    className="block py-2 text-sm text-muted-foreground hover:text-foreground ecovera-transition"
                   >
                     {link.name}
                   </Link>
@@ -118,7 +118,7 @@ export function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm text-muted-foreground hover:text-foreground ecovera-transition"
+                    className="block py-2 text-sm text-muted-foreground hover:text-foreground ecovera-transition"
                   >
                     {link.name}
                   </Link>

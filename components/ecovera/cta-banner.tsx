@@ -32,20 +32,19 @@ export function CTABanner() {
   return (
     <section className="py-24 bg-background">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div 
+        <div
           ref={bannerRef}
-          className={`rounded-3xl p-12 md:p-16 flex flex-col justify-center relative overflow-hidden min-h-[400px] transition-all duration-700 ease-out ${
-            isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
-          }`}
+          className={`rounded-3xl p-12 md:p-16 flex flex-col justify-center relative overflow-hidden min-h-[400px] transition-all duration-700 ease-out ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+            }`}
         >
           {/* Background Image */}
           <Image
-            src="/images/cta-natural-bg.jpg"
+            src="/images/himalayan-nature-cta.png"
             alt="Natural ingredients"
             fill
             className="object-cover"
           />
-          
+
           <div className="relative z-10 text-left max-w-2xl">
             <h3 className="text-4xl md:text-5xl text-white mb-4 lg:text-5xl">
               100% Natural
@@ -53,7 +52,7 @@ export function CTABanner() {
             <h3 className="text-3xl md:text-4xl lg:text-5xl text-white/70 mb-8">
               100% You
             </h3>
-            
+
             <div className="flex flex-col items-start gap-4">
               <div className="flex items-center gap-3 text-white/90">
                 <Leaf className="w-5 h-5 flex-shrink-0" strokeWidth={1} />

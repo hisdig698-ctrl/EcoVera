@@ -10,8 +10,8 @@ export function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/hero-bg.jpg"
-          alt="Natural skincare"
+          src="/images/himalayan-nature-cta.png"
+          alt="Artemisia products"
           fill
           className="object-cover"
           priority
@@ -21,18 +21,18 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 w-full pt-20 mr-14 lg:mr-0">
+      <div className="relative z-10 w-full pt-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="w-full lg:max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
             <span className="text-sm uppercase mb-6 block text-foreground animate-blur-in opacity-0 tracking-normal" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
-              Natural Skincare
+              EcoVera Artemisia™ BioSolution
             </span>
             <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.1] mb-6 text-balance text-foreground">
-              <span className="block animate-blur-in opacity-0 font-semibold" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>Glow gently.</span>
-              <span className="block animate-blur-in opacity-0 font-semibold xl:text-9xl text-7xl" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>Naturally you.</span>
+              <span className="block animate-blur-in opacity-0 font-semibold" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>Empowering Farmers.</span>
+              <span className="block animate-blur-in opacity-0 font-semibold xl:text-8xl text-5xl sm:text-6xl md:text-7xl" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>Healing Naturally.</span>
             </h2>
             <p className="text-lg leading-relaxed mb-10 max-w-md mx-auto lg:mx-0 text-foreground animate-blur-in opacity-0" style={{ animationDelay: '0.8s', animationFillMode: 'forwards' }}>
-              Discover skincare that breathes with you. Pure ingredients, gentle rituals, radiant results.
+              A sustainable agribusiness transforming underutilized rural resources into premium, health-oriented Artemisia products.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-blur-in opacity-0" style={{ animationDelay: '1s', animationFillMode: 'forwards' }}>
               <Link

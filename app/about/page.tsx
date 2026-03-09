@@ -6,33 +6,33 @@ import Image from "next/image"
 const values = [
     {
         icon: Leaf,
-        title: "100% Natural",
-        description: "Every ingredient is sourced from nature. No synthetic chemicals, parabens, or artificial fragrances ever touch our formulas."
+        title: "Community-Centered",
+        description: "We partner directly with farmers to cultivate Artemisia on idle land using improved agricultural practices."
     },
     {
         icon: Heart,
-        title: "Cruelty-Free",
-        description: "We never test on animals and never will. All our products are certified cruelty-free and vegan-friendly."
+        title: "Fair Income",
+        description: "Our direct partnerships guarantee fair income opportunities and transform rural agriculture into a profitable pursuit."
     },
     {
         icon: Globe,
-        title: "Ethically Sourced",
-        description: "We partner with fair-trade certified suppliers who share our commitment to environmental and social responsibility."
+        title: "Global Demand",
+        description: "Meeting the rapidly expanding global demand for Artemisia in pharmaceutical, health, and wellness sectors."
     },
     {
         icon: Recycle,
-        title: "Eco Packaging",
-        description: "Our packaging is made from recycled and biodegradable materials. We're working toward a zero-waste future."
+        title: "Land Utilization",
+        description: "We focus on the productive utilization of unused agricultural land, reducing waste and boosting rural productivity."
     },
     {
         icon: Sparkles,
-        title: "Clean Beauty",
-        description: "Our clean beauty standards exceed industry norms. Every product undergoes rigorous purity testing."
+        title: "Value Creation",
+        description: "From supplying raw biomass to creating high-margin therapeutic and cosmetic products derived from Artemisia."
     },
     {
         icon: Users,
-        title: "Community First",
-        description: "We invest in the communities where our ingredients are sourced, supporting education and sustainable farming."
+        title: "Social Impact",
+        description: "Directly contributing to UN SDGs, including No Poverty, Good Health, Economic Growth, and Life on Land."
     }
 ]
 
@@ -46,43 +46,45 @@ export default function AboutPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center max-w-3xl mx-auto">
                         <span className="text-sm tracking-[0.3em] uppercase text-primary mb-4 block">
-                            Our Story
+                            EcoVera Artemisia™ BioSolution
                         </span>
                         <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl text-foreground mb-6 text-balance">
-                            Beauty that breathes with nature
+                            Transforming Rural Resources
                         </h1>
                         <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-                            EcoVera was born from a simple belief: skincare should be as pure and gentle as nature intended. We create products that honor your skin and the planet.
+                            EcoVera Artemisia™ BioSolution is a sustainable agribusiness and social impact venture designed to transform underutilized rural resources into profitable, health-oriented, and environmentally responsible products.
                         </p>
                     </div>
                 </div>
             </section>
 
-            {/* Image + Story */}
+            {/* Problem & Solution */}
             <section className="pb-20 sm:pb-24">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-                        <div className="relative aspect-[4/5] rounded-3xl overflow-hidden ecovera-shadow">
-                            <Image
-                                src="/images/bento-skincare-1.jpg"
-                                alt="EcoVera natural skincare"
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
+                    <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
                         <div>
                             <h2 className="font-serif text-3xl sm:text-4xl text-foreground mb-6">
-                                From seed to skin
+                                The Problem We Address
                             </h2>
                             <div className="space-y-4 text-muted-foreground leading-relaxed">
                                 <p>
-                                    Founded in 2020, EcoVera started as a small kitchen experiment — a quest to create skincare that actually felt natural. We were tired of &ldquo;natural&rdquo; labels hiding behind long lists of chemicals we couldn&apos;t pronounce.
+                                    Many rural communities face persistent economic challenges. Farmers often struggle with low and unstable incomes, while traditional agriculture offers limited profitability. At the same time, large areas of agricultural land remain underutilized, and significant amounts of agricultural waste are not effectively managed.
                                 </p>
                                 <p>
-                                    Today, we source our ingredients from organic farms and fair-trade cooperatives around the world. Every formula is crafted by our team of botanists and dermatologists to deliver real results without compromising on purity.
+                                    These issues contribute to increasing youth migration from rural areas, as young people leave their communities in search of better economic opportunities. As a result, rural regions experience declining productivity and weakened local economies.
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <h2 className="font-serif text-3xl sm:text-4xl text-foreground mb-6">
+                                Our Solution
+                            </h2>
+                            <div className="space-y-4 text-muted-foreground leading-relaxed">
+                                <p>
+                                    Our solution is based on community-centered Artemisia farming and processing. We partner directly with farmers to cultivate Artemisia on idle or underused land using improved agricultural practices and modern cultivation techniques that enhance productivity and yield.
                                 </p>
                                 <p>
-                                    Our commitment goes beyond skincare. We&apos;re dedicated to sustainability across our entire supply chain — from biodegradable packaging to carbon-neutral shipping. Because caring for your skin shouldn&apos;t cost the earth.
+                                    By integrating farmers into a value-driven supply chain, EcoVera helps transform rural agriculture into a sustainable and profitable economic activity, building local employment and agricultural capacity.
                                 </p>
                             </div>
                         </div>
@@ -121,20 +123,20 @@ export default function AboutPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="max-w-3xl mx-auto text-center">
                         <span className="text-sm tracking-[0.3em] uppercase text-primary mb-4 block">
-                            Sustainability
+                            Our Vision
                         </span>
                         <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-foreground mb-6 text-balance">
-                            Our pledge to the planet
+                            A scalable global bioenterprise
                         </h2>
                         <div className="space-y-4 text-muted-foreground leading-relaxed text-left sm:text-center">
                             <p>
-                                By 2025, we achieved 100% recyclable packaging across all product lines. Our glass bottles are infinitely recyclable, and our labels are printed with soy-based inks on FSC-certified paper.
+                                Our vision is to build a scalable global Artemisia-based bioenterprise that empowers rural farmers, produces high-quality natural health products, and contributes to a more sustainable and inclusive agricultural economy.
                             </p>
                             <p>
-                                We offset 150% of our carbon emissions through verified reforestation projects. Every order you place contributes to planting trees in areas affected by deforestation.
+                                We operate through a two-phase value creation strategy: initially generating early revenue by supplying raw Artemisia leaves and biomass to pharmaceutical companies, and later moving up the value chain by producing high-margin products like essential oils, therapeutic items, and natural disinfectants.
                             </p>
                             <p>
-                                Our refill program reduces packaging waste by 80%. Simply return your empty containers to any EcoVera partner store and receive a discount on your next refill.
+                                By combining low production costs with high-value market opportunities, we generate sustainable profits while maintaining strong social impact.
                             </p>
                         </div>
                     </div>

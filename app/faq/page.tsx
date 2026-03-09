@@ -9,25 +9,24 @@ const faqCategories = [
     {
         title: "Products",
         items: [
-            { q: "Are EcoVera products suitable for sensitive skin?", a: "Yes! All our products are dermatologist-tested and formulated for sensitive skin. We avoid common irritants like synthetic fragrances, parabens, and sulfates. If you have specific allergies, please check our full ingredients list on each product page." },
-            { q: "How long do your products last once opened?", a: "Most of our products have a shelf life of 12 months once opened. Each product features a PAO (Period After Opening) symbol indicating the exact timeframe. Store products in a cool, dry place away from direct sunlight." },
-            { q: "Are your products vegan and cruelty-free?", a: "Absolutely. All EcoVera products are 100% vegan and cruelty-free. We never test on animals and are certified by Leaping Bunny and PETA." },
-            { q: "Can I use multiple EcoVera products together?", a: "Yes, our products are designed to work beautifully together. We recommend starting with the Gentle Cleanser, followed by a serum, and finishing with a cream or oil. Check our product pages for recommended routines." },
+            { q: "What is Artemisia Vulgaris (Titepati)?", a: "Artemisia Vulgaris, locally known as Titepati in Nepal, is a powerful medicinal herb. We use it as the core ingredient in our products for its natural anti-bacterial, anti-inflammatory, and healing properties." },
+            { q: "Are EcoVera products safe for daily use?", a: "Yes! All our products, including the Hand Sanitizer, Soaps, and Cosmetics Set, are formulated with natural ingredients and are safe for daily use. We avoid harsh synthetic chemicals." },
+            { q: "How should I use the Tibetan Mugwort Incense?", a: "Light the tip of the incense stick, gently blow out the flame, and place it in a heat-resistant holder. It's excellent for air purification, meditation, and creating a calming environment." },
+            { q: "Is the Mugwort Essential Oil pure?", a: "Absolutely. Our Mugwort Essential Oil is 100% pure and extracted using traditional distillation methods. We recommend diluting it with a carrier oil before applying directly to the skin." },
+        ]
+    },
+    {
+        title: "Sourcing & Impact",
+        items: [
+            { q: "How does EcoVera support local farmers?", a: "We partner directly with rural farmers in Nepal to cultivate Artemisia on previously underutilized land. By purchasing at fair prices and eliminating middlemen, we guarantee fair income and promote sustainable agriculture." },
+            { q: "Where are the products manufactured?", a: "Our raw materials are cultivated and initially processed in rural farming communities to maximize local economic impact. Formulation and quality control are then finalized in our central facilities." },
         ]
     },
     {
         title: "Orders & Shipping",
         items: [
-            { q: "How long does shipping take?", a: "Standard shipping takes 3-5 business days within the US. Express shipping (1-2 business days) is available at checkout. International shipping typically takes 7-14 business days." },
-            { q: "Is there free shipping?", a: "Yes! We offer free standard shipping on all US orders over Rs. 50. International orders over Rs. 100 also qualify for free shipping." },
-            { q: "Can I track my order?", a: "Absolutely. Once your order ships, you'll receive a tracking number via email. You can also track your order through our website using your order number." },
-        ]
-    },
-    {
-        title: "Returns & Refunds",
-        items: [
-            { q: "What is your return policy?", a: "We accept returns within 30 days of purchase for unused and sealed products. Opened products may be returned within 14 days if you're unsatisfied. We'll provide a full refund or exchange." },
-            { q: "How do I initiate a return?", a: "Contact us at hello@ecovera.com with your order number and reason for return. We'll provide a prepaid return label and process your refund within 5-7 business days of receiving the product." },
+            { q: "Do you ship internationally?", a: "Yes, we ship globally! We are meeting the growing international demand for Artemisia-based products. International shipping typically takes 7-14 business days depending on the destination." },
+            { q: "How can I track my order?", a: "Once your order is processed and shipped, you will receive a confirmation email with a tracking number that you can use on our website." },
         ]
     }
 ]

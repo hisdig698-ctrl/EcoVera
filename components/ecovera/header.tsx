@@ -38,6 +38,12 @@ export function Header() {
           {/* Desktop Navigation - Left */}
           <div className="hidden lg:flex items-center gap-8">
             <Link
+              href="/"
+              className="text-sm tracking-wide text-foreground/70 hover:text-foreground ecovera-transition"
+            >
+              {t('nav.home')}
+            </Link>
+            <Link
               href="/shop"
               className="text-sm tracking-wide text-foreground/70 hover:text-foreground ecovera-transition"
             >
@@ -64,25 +70,28 @@ export function Header() {
 
           {/* Right Actions */}
           <div className="flex items-center gap-2 sm:gap-4">
-            <button
-              onClick={() => setLanguage(language === 'en' ? 'ne' : 'en')}
-              className="text-xs font-semibold tracking-widest uppercase text-foreground/70 hover:text-foreground ecovera-transition px-2"
-              aria-label="Toggle language"
-            >
-              {language === 'en' ? 'EN' : 'NE'}
-            </button>
-            <button
-              type="button"
-              onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-              className="p-2 text-foreground/70 hover:text-foreground ecovera-transition"
-              aria-label="Toggle theme"
-            >
-              {mounted && resolvedTheme === "dark" ? (
-                <Sun className="w-5 h-5" />
-              ) : (
-                <Moon className="w-5 h-5" />
-              )}
-            </button>
+            {/* Desktop-only settings */}
+            <div className="hidden sm:flex items-center gap-2">
+              <button
+                onClick={() => setLanguage(language === 'en' ? 'ne' : 'en')}
+                className="text-xs font-semibold tracking-widest uppercase text-foreground/70 hover:text-foreground ecovera-transition px-2"
+                aria-label="Toggle language"
+              >
+                {language === 'en' ? 'EN' : 'NE'}
+              </button>
+              <button
+                type="button"
+                onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+                className="p-2 text-foreground/70 hover:text-foreground ecovera-transition"
+                aria-label="Toggle theme"
+              >
+                {mounted && resolvedTheme === "dark" ? (
+                  <Sun className="w-5 h-5" />
+                ) : (
+                  <Moon className="w-5 h-5" />
+                )}
+              </button>
+            </div>
             <button
               type="button"
               className="p-2 text-foreground/70 hover:text-foreground ecovera-transition"
@@ -117,12 +126,42 @@ export function Header() {
         <CartDrawer />
         <SearchOverlay isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
 
-        {/* Mobile Navigation */}
         <div
-          className={`lg:hidden overflow-hidden ecovera-transition ${isMenuOpen ? "max-h-80 pb-6" : "max-h-0"
+          className={`lg:hidden overflow-hidden ecovera-transition bg-background/95 backdrop-blur-md absolute top-full left-0 right-0 shadow-lg border-t border-border/20 rounded-b-xl ${isMenuOpen ? "max-h-96 pb-6" : "max-h-0"
             }`}
         >
-          <div className="flex flex-col gap-4 pt-4 border-t border-border/50">
+          <div className="flex flex-col gap-4 p-6">
+            <div className="flex items-center justify-between mb-4 border-b border-border/50 pb-4">
+              <span className="text-xs tracking-wider uppercase font-semibold text-muted-foreground">Settings</span>
+              <div className="flex items-center gap-4">
+                <button
+                  onClick={() => setLanguage(language === 'en' ? 'ne' : 'en')}
+                  className="text-xs font-semibold tracking-widest uppercase text-foreground/70 hover:text-foreground ecovera-transition px-2"
+                  aria-label="Toggle language"
+                >
+                  {language === 'en' ? 'EN' : 'NE'}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+                  className="p-2 text-foreground/70 hover:text-foreground ecovera-transition"
+                  aria-label="Toggle theme"
+                >
+                  {mounted && resolvedTheme === "dark" ? (
+                    <Sun className="w-5 h-5" />
+                  ) : (
+                    <Moon className="w-5 h-5" />
+                  )}
+                </button>
+              </div>
+            </div>
+            <Link
+              href="/"
+              className="text-sm tracking-wide text-foreground/70 hover:text-foreground ecovera-transition"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {t('nav.home')}
+            </Link>
             <Link
               href="/shop"
               className="text-sm tracking-wide text-foreground/70 hover:text-foreground ecovera-transition"

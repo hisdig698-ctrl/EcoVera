@@ -13,6 +13,7 @@ interface LanguageContextType {
 export const dictionary: Record<Language, Record<string, string>> = {
     en: {
         // Nav
+        "nav.home": "Home",
         "nav.shop": "Shop",
         "nav.about": "About",
         "nav.ingredients": "Ingredients",
@@ -35,13 +36,13 @@ export const dictionary: Record<Language, Record<string, string>> = {
         "cart.checkout": "Checkout",
 
         // Footer
-        "footer.desc": "Natural skincare for those who believe beauty should feel as good as it looks.",
+        "footer.desc": "A sustainable agribusiness transforming underutilized rural resources into premium, health-oriented Artemisia products.",
         "footer.shop": "Shop",
         "footer.support": "Support",
         "footer.all_products": "All Products",
-        "footer.serums": "Serums",
-        "footer.moisturizers": "Moisturizers",
-        "footer.cleansers": "Cleansers",
+        "footer.wellness": "Wellness & Health",
+        "footer.essential_oils": "Essential Oils",
+        "footer.cosmetics": "Cosmetics",
         "footer.gift_sets": "Gift Sets",
         "footer.our_story": "Our Story",
         "footer.sustainability": "Sustainability",
@@ -55,6 +56,7 @@ export const dictionary: Record<Language, Record<string, string>> = {
     },
     ne: {
         // Nav
+        "nav.home": "गृहपृष्ठ",
         "nav.shop": "पसल",
         "nav.about": "हाम्रो बारेमा",
         "nav.ingredients": "सामग्रीहरू",
@@ -77,13 +79,13 @@ export const dictionary: Record<Language, Record<string, string>> = {
         "cart.checkout": "चेकआउट",
 
         // Footer
-        "footer.desc": "प्राकृतिक छाला स्याहार जसले तपाईंलाई राम्रो देखाउने मात्र होइन, राम्रो महसुस पनि गराउँछ।",
+        "footer.desc": "प्राकृतिक स्रोतबाट तयार पारिएको स्वास्थ्यवर्धक उत्पादनहरू।",
         "footer.shop": "पसल",
         "footer.support": "सहयोग",
         "footer.all_products": "सबै उत्पादनहरू",
-        "footer.serums": "सेरमहरू",
-        "footer.moisturizers": "मोइस्चराइजरहरू",
-        "footer.cleansers": "क्लिन्जरहरू",
+        "footer.wellness": "स्वास्थ्य",
+        "footer.essential_oils": "अत्यावश्यक तेल",
+        "footer.cosmetics": "सौन्दर्य प्रसाधन",
         "footer.gift_sets": "उपहार सेटहरू",
         "footer.our_story": "हाम्रो कथा",
         "footer.sustainability": "दिगोपन",

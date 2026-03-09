@@ -103,15 +103,15 @@ export function FeatureSection() {
             style={{ transitionDelay: '0ms' }}
           >
             <Image
-              src="/images/bento-skincare-1.jpg"
-              alt="Natural skincare routine"
+              src="/images/farming-artemisia-bg.png"
+              alt="Artemisia farm"
               fill
               className="object-cover"
             />
             {/* Overlay Card */}
             <div className="absolute bottom-8 left-8 right-8 bg-card p-6 shadow-lg rounded-xl">
-              <h3 className="font-serif text-2xl text-foreground mb-2">Award-Winning Formulas</h3>
-              <p className="text-muted-foreground text-sm">Voted Best Natural Skincare 2026</p>
+              <h3 className="font-serif text-2xl text-foreground mb-2">Empowering Agriculture</h3>
+              <p className="text-muted-foreground text-sm">Transforming underutilized lands</p>
             </div>
           </div>
 
@@ -123,7 +123,7 @@ export function FeatureSection() {
           >
             {/* Background Image */}
             <Image
-              src="/images/products/natural-ingredients-bg.jpg"
+              src="/images/natural-ingredients-artemisia.png"
               alt="Natural ingredients"
               fill
               className="object-cover"
@@ -163,7 +163,7 @@ export function FeatureSection() {
           >
             {/* Background Image */}
             <Image
-              src="/images/bento-eco-packaging.jpg"
+              src="/images/eco-packaging-nature.png"
               alt="Eco-friendly packaging"
               fill
               className="object-cover"
@@ -195,7 +195,7 @@ export function FeatureSection() {
               }`}
           >
             <Image
-              src="/images/bento-application.jpg"
+              src="/images/healing-ritual-application.png"
               alt="Skincare application"
               fill
               className="object-cover"
@@ -213,11 +213,10 @@ export function FeatureSection() {
               Why EcoVera
             </span>
             <h2 className={`font-serif text-4xl leading-tight text-foreground mb-6 text-balance md:text-5xl lg:text-7xl ${headerVisible ? 'animate-blur-in opacity-0' : 'opacity-0'}`} style={headerVisible ? { animationDelay: '0.4s', animationFillMode: 'forwards' } : {}}>
-              Care that breathes.
+              Value from nature.
             </h2>
             <p className={`text-lg text-muted-foreground leading-relaxed mb-10 max-w-md ${headerVisible ? 'animate-blur-in opacity-0' : 'opacity-0'}`} style={headerVisible ? { animationDelay: '0.6s', animationFillMode: 'forwards' } : {}}>
-              We believe skincare should be a gentle ritual, not a complicated routine.
-              Every product is crafted with intention and love for your skin.
+              We believe in creating sustainable ecosystems that benefit both local farmers and global health by harnessing the therapeutic power of Artemisia.
             </p>
 
             {/* Feature Cards */}

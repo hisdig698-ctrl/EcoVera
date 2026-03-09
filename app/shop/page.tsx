@@ -10,153 +10,62 @@ import { Footer } from "@/components/ecovera/footer"
 import { useCart } from "@/components/ecovera/cart-context"
 
 const products = [
-  // Serums
+  // Wellness
   {
-    id: "radiance-serum",
-    name: "Radiance Serum",
-    description: "Vitamin C brightening formula",
-    price: 68,
-    originalPrice: null,
-    image: "/images/products/serum-bottles-1.jpg",
+    id: "hand-sanitizer",
+    name: "Titepati Hand Sanitizer",
+    description: "Kills 99.9% of germs with natural extracts",
+    price: 15,
+    originalPrice: 18,
+    image: "/images/products/hand-sanitizer.jpg",
     badge: "Bestseller",
-    category: "serums"
+    category: "wellness"
   },
   {
-    id: "hydrating-serum",
-    name: "Hydrating Serum",
-    description: "Hyaluronic acid moisture boost",
-    price: 62,
+    id: "mugwort-incense",
+    name: "Tibetan Mugwort Incense",
+    description: "Traditional herbal incense for cleansing",
+    price: 25,
     originalPrice: null,
-    image: "/images/products/eye-serum-bottles.jpg",
-    badge: null,
-    category: "serums"
-  },
-  {
-    id: "age-defense-serum",
-    name: "Age Defense Serum",
-    description: "Retinol & peptide complex",
-    price: 78,
-    originalPrice: null,
-    image: "/images/products/amber-dropper-bottles.jpg",
+    image: "/images/products/mugwort-incense.jpg",
     badge: "New",
-    category: "serums"
+    category: "wellness"
   },
+  // Essential Oils
   {
-    id: "glow-serum",
-    name: "Glow Serum",
-    description: "Niacinamide brightening boost",
-    price: 58,
-    originalPrice: 68,
-    image: "/images/products/spray-bottles.jpg",
-    badge: "Sale",
-    category: "serums"
-  },
-  // Creams
-  {
-    id: "hydra-cream",
-    name: "Hydra Cream",
-    description: "Deep moisture with hyaluronic acid",
-    price: 54,
-    originalPrice: null,
-    image: "/images/products/cream-jars-colored.jpg",
-    badge: null,
-    category: "moisturizers"
-  },
-  {
-    id: "gentle-cleanser",
-    name: "Gentle Cleanser",
-    description: "Soothing botanical wash",
-    price: 38,
-    originalPrice: 48,
-    image: "/images/products/tube-bottles.jpg",
-    badge: "Sale",
-    category: "cleansers"
-  },
-  {
-    id: "night-cream",
-    name: "Night Cream",
-    description: "Restorative overnight treatment",
-    price: 64,
-    originalPrice: null,
-    image: "/images/products/jars-wooden-lid.jpg",
-    badge: "Bestseller",
-    category: "moisturizers"
-  },
-  {
-    id: "day-cream-spf",
-    name: "Day Cream SPF 30",
-    description: "Protection & hydration",
-    price: 58,
-    originalPrice: null,
-    image: "/images/products/pump-bottles-lavender.jpg",
-    badge: null,
-    category: "moisturizers"
-  },
-  // Oils
-  {
-    id: "renewal-oil",
-    name: "Renewal Oil",
-    description: "Nourishing facial oil blend",
-    price: 72,
-    originalPrice: null,
-    image: "/images/products/amber-dropper-bottles.jpg",
-    badge: "New",
-    category: "oils"
-  },
-  {
-    id: "rosehip-oil",
-    name: "Rosehip Oil",
-    description: "Pure organic rosehip extract",
-    price: 48,
-    originalPrice: null,
-    image: "/images/products/serum-bottles-1.jpg",
-    badge: null,
-    category: "oils"
-  },
-  {
-    id: "jojoba-oil",
-    name: "Jojoba Oil",
-    description: "Balancing & lightweight",
-    price: 42,
-    originalPrice: null,
-    image: "/images/products/spray-bottles.jpg",
-    badge: null,
-    category: "oils"
-  },
-  {
-    id: "argan-oil",
-    name: "Argan Oil",
-    description: "Moroccan beauty elixir",
-    price: 56,
-    originalPrice: null,
-    image: "/images/products/pump-bottles-cream.jpg",
-    badge: "Bestseller",
-    category: "oils"
-  },
-  // Masks & Toners
-  {
-    id: "glow-mask",
-    name: "Glow Mask",
-    description: "Weekly brightening treatment",
+    id: "mugwort-oil",
+    name: "Mugwort Essential Oil",
+    description: "Pure Artemisia Vulgaris extract (50ml)",
     price: 45,
     originalPrice: null,
-    image: "/images/products/mask.jpg",
-    badge: null,
-    category: "masks"
+    image: "/images/products/mugwort-oil.jpg",
+    badge: "Premium",
+    category: "essential-oils"
+  },
+  // Cosmetics
+  {
+    id: "titepati-soap",
+    name: "Titepati Skin Treatment Soap",
+    description: "Ayurvedic Okhati therapeutic bar",
+    price: 12,
+    originalPrice: null,
+    image: "/images/products/titepati-soap.jpg",
+    badge: "Bestseller",
+    category: "cosmetics"
   },
   {
-    id: "balance-toner",
-    name: "Balance Toner",
-    description: "pH restoring mist",
-    price: 32,
-    originalPrice: null,
-    image: "/images/products/toner.jpg",
-    badge: "New",
-    category: "toners"
+    id: "herbal-cosmetics-set",
+    name: "Titepati Herbal Cosmetics Set",
+    description: "Complete glow skin toner, face wash, and moisturizer bundle",
+    price: 85,
+    originalPrice: 110,
+    image: "/images/products/herbal-cosmetics.jpg",
+    badge: "Sale",
+    category: "cosmetics"
   }
 ]
 
-const categories = ["all", "serums", "moisturizers", "cleansers", "oils", "masks", "toners"]
+const categories = ["all", "wellness", "essential-oils", "cosmetics"]
 
 export default function ShopPage() {
   return (
@@ -231,7 +140,7 @@ function ShopContent() {
               Shop All Products
             </h1>
             <p className="text-base sm:text-lg text-muted-foreground max-w-md mx-auto">
-              Discover our complete range of natural skincare essentials
+              Discover our complete range of Artemisia based products
             </p>
           </div>
 
@@ -378,7 +287,7 @@ function ProductCard({
           {/* Quick add button */}
           <button
             type="button"
-            className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-background/90 backdrop-blur-sm flex items-center justify-center opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 ecovera-transition ecovera-shadow"
+            className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-background/90 backdrop-blur-sm flex items-center justify-center translate-y-0 opacity-100 lg:opacity-0 lg:translate-y-2 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 ecovera-transition ecovera-shadow"
             onClick={(e) => {
               e.preventDefault()
               e.stopPropagation()

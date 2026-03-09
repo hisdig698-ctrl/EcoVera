@@ -6,142 +6,72 @@ import Link from "next/link"
 import { ShoppingBag } from "lucide-react"
 import { useCart } from "./cart-context"
 
-type Category = "cream" | "oil" | "serum"
+type Category = "wellness" | "cosmetics" | "essential-oils"
 
 const products = [
-  // Serums
+  // Wellness
   {
-    id: "radiance-serum",
-    name: "Radiance Serum",
-    description: "Vitamin C brightening formula",
-    price: 68,
-    originalPrice: null,
-    image: "/images/products/serum-bottles-1.jpg",
+    id: "hand-sanitizer",
+    name: "Titepati Hand Sanitizer",
+    description: "Kills 99.9% of germs with natural extracts",
+    price: 15,
+    originalPrice: 18,
+    image: "/images/products/hand-sanitizer.jpg",
     badge: "Bestseller",
-    category: "serum" as Category
+    category: "wellness" as Category
   },
   {
-    id: "hydrating-serum",
-    name: "Hydrating Serum",
-    description: "Hyaluronic acid moisture boost",
-    price: 62,
+    id: "mugwort-incense",
+    name: "Tibetan Mugwort Incense",
+    description: "Traditional herbal incense for cleansing",
+    price: 25,
     originalPrice: null,
-    image: "/images/products/eye-serum-bottles.jpg",
-    badge: null,
-    category: "serum" as Category
-  },
-  {
-    id: "age-defense-serum",
-    name: "Age Defense Serum",
-    description: "Retinol & peptide complex",
-    price: 78,
-    originalPrice: null,
-    image: "/images/products/amber-dropper-bottles.jpg",
+    image: "/images/products/mugwort-incense.jpg",
     badge: "New",
-    category: "serum" as Category
+    category: "wellness" as Category
   },
+  // Essential Oils
   {
-    id: "glow-serum",
-    name: "Glow Serum",
-    description: "Niacinamide brightening boost",
-    price: 58,
-    originalPrice: 68,
-    image: "/images/products/spray-bottles.jpg",
-    badge: "Sale",
-    category: "serum" as Category
-  },
-  // Creams
-  {
-    id: "hydra-cream",
-    name: "Hydra Cream",
-    description: "Deep moisture with hyaluronic acid",
-    price: 54,
+    id: "mugwort-oil",
+    name: "Mugwort Essential Oil",
+    description: "Pure Artemisia Vulgaris extract (50ml)",
+    price: 45,
     originalPrice: null,
-    image: "/images/products/cream-jars-colored.jpg",
-    badge: null,
-    category: "cream" as Category
+    image: "/images/products/mugwort-oil.jpg",
+    badge: "Premium",
+    category: "essential-oils" as Category
   },
+  // Cosmetics
   {
-    id: "gentle-cleanser",
-    name: "Gentle Cleanser",
-    description: "Soothing botanical wash",
-    price: 38,
-    originalPrice: 48,
-    image: "/images/products/tube-bottles.jpg",
-    badge: "Sale",
-    category: "cream" as Category
-  },
-  {
-    id: "night-cream",
-    name: "Night Cream",
-    description: "Restorative overnight treatment",
-    price: 64,
+    id: "titepati-soap",
+    name: "Titepati Skin Treatment Soap",
+    description: "Ayurvedic Okhati therapeutic bar",
+    price: 12,
     originalPrice: null,
-    image: "/images/products/jars-wooden-lid.jpg",
+    image: "/images/products/titepati-soap.jpg",
     badge: "Bestseller",
-    category: "cream" as Category
+    category: "cosmetics" as Category
   },
   {
-    id: "day-cream-spf",
-    name: "Day Cream SPF 30",
-    description: "Protection & hydration",
-    price: 58,
-    originalPrice: null,
-    image: "/images/products/pump-bottles-lavender.jpg",
-    badge: null,
-    category: "cream" as Category
-  },
-  // Oils
-  {
-    id: "renewal-oil",
-    name: "Renewal Oil",
-    description: "Nourishing facial oil blend",
-    price: 72,
-    originalPrice: null,
-    image: "/images/products/amber-dropper-bottles.jpg",
-    badge: "New",
-    category: "oil" as Category
-  },
-  {
-    id: "rosehip-oil",
-    name: "Rosehip Oil",
-    description: "Pure organic rosehip extract",
-    price: 48,
-    originalPrice: null,
-    image: "/images/products/serum-bottles-1.png",
-    badge: null,
-    category: "oil" as Category
-  },
-  {
-    id: "jojoba-oil",
-    name: "Jojoba Oil",
-    description: "Balancing & lightweight",
-    price: 42,
-    originalPrice: null,
-    image: "/images/products/spray-bottles.jpg",
-    badge: null,
-    category: "oil" as Category
-  },
-  {
-    id: "argan-oil",
-    name: "Argan Oil",
-    description: "Moroccan beauty elixir",
-    price: 56,
-    originalPrice: null,
-    image: "/images/products/pump-bottles-cream.jpg",
-    badge: "Bestseller",
-    category: "oil" as Category
+    id: "herbal-cosmetics-set",
+    name: "Titepati Herbal Cosmetics Set",
+    description: "Complete glow skin toner, face wash, and moisturizer bundle",
+    price: 85,
+    originalPrice: 110,
+    image: "/images/products/herbal-cosmetics.jpg",
+    badge: "Sale",
+    category: "cosmetics" as Category
   }
 ]
 
 const categories = [
-  { value: "cream" as Category, label: "Cream" },
-  { value: "oil" as Category, label: "Oil" },
-  { value: "serum" as Category, label: "Serum" }
+  { value: "wellness" as Category, label: "Wellness & Health" },
+  { value: "essential-oils" as Category, label: "Essential Oils" },
+  { value: "cosmetics" as Category, label: "Cosmetics" }
 ]
 
 export function ProductGrid() {
-  const [selectedCategory, setSelectedCategory] = useState<Category>("cream")
+  const [selectedCategory, setSelectedCategory] = useState<Category>("wellness")
   const [isVisible, setIsVisible] = useState(false)
   const [isTransitioning, setIsTransitioning] = useState(false)
   const [headerVisible, setHeaderVisible] = useState(false)
@@ -225,15 +155,15 @@ export function ProductGrid() {
         </div>
 
         {/* Segmented Control */}
-        <div className="flex justify-center mb-12">
-          <div className="inline-flex bg-background rounded-full p-1 gap-1 relative">
+        <div className="flex justify-start sm:justify-center mb-12 overflow-x-auto pb-4 sm:pb-0 scrollbar-hide -mx-6 px-6 sm:mx-0 sm:px-0">
+          <div className="inline-flex bg-background rounded-full p-1 gap-1 relative min-w-max">
             {/* Animated background slide */}
             <div
-              className="absolute top-1 bottom-1 bg-foreground rounded-full transition-all duration-300 ease-out shadow-sm"
-              style={{
-                left: selectedCategory === 'cream' ? '4px' : selectedCategory === 'oil' ? 'calc(33.333% + 2px)' : 'calc(66.666%)',
-                width: 'calc(33.333% - 4px)'
-              }}
+              className={`absolute top-1 bottom-1 bg-foreground rounded-full transition-all duration-300 ease-out shadow-sm
+                ${selectedCategory === 'wellness' ? 'left-1 w-[160px]' : ''}
+                ${selectedCategory === 'essential-oils' ? 'left-[161px] w-[130px]' : ''}
+                ${selectedCategory === 'cosmetics' ? 'left-[291px] w-[105px]' : ''}
+              `}
             />
             {categories.map((category) => (
               <button
@@ -289,7 +219,7 @@ export function ProductGrid() {
                   {/* Quick add button */}
                   <button
                     type="button"
-                    className="absolute bottom-4 right-4 w-10 h-10 rounded-full bg-background/90 backdrop-blur-sm flex items-center justify-center opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 ecovera-transition ecovera-shadow"
+                    className="absolute bottom-4 right-4 w-10 h-10 rounded-full bg-background/90 backdrop-blur-sm flex items-center justify-center translate-y-0 opacity-100 lg:opacity-0 lg:translate-y-2 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 ecovera-transition ecovera-shadow"
                     onClick={(e) => {
                       e.preventDefault()
                       e.stopPropagation()

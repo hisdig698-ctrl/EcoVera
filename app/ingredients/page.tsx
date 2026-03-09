@@ -6,57 +6,57 @@ import Image from "next/image"
 const ingredients = [
     {
         icon: Leaf,
-        name: "Rosehip Seed Oil",
-        origin: "Chile",
-        benefit: "Brightening & Anti-aging",
-        description: "Cold-pressed from organic rosehip seeds, rich in vitamins A and C. Helps reduce scars, fine lines, and uneven skin tone."
+        name: "Artemisia Vulgaris (Titepati)",
+        origin: "Nepal",
+        benefit: "Anti-bacterial & Healing",
+        description: "Our core ingredient, sustainably harvested by local farmers. Known for its powerful natural antiseptic, anti-inflammatory, and healing properties."
     },
     {
         icon: Droplets,
-        name: "Hyaluronic Acid",
-        origin: "Plant-derived",
-        benefit: "Deep Hydration",
-        description: "Our plant-derived hyaluronic acid holds up to 1000x its weight in water, providing multi-layer hydration that lasts all day."
+        name: "Pure Essential Oils",
+        origin: "Himalayas",
+        benefit: "Aromatherapy & Calming",
+        description: "Extracted using traditional distillation methods to preserve their therapeutic benefits. Used to promote relaxation and skin health."
     },
     {
         icon: Sun,
-        name: "Vitamin C",
-        origin: "Kakadu Plum",
-        benefit: "Brightening & Protection",
-        description: "Sourced from Australian Kakadu plum — the world's richest natural source of Vitamin C. Powerful antioxidant protection."
+        name: "Ayurvedic Okhati",
+        origin: "Locally Sourced",
+        benefit: "Skin Treatment",
+        description: "A traditional blend of medicinal herbs used for centuries to treat skin conditions, provide deep nourishment, and restore natural balance."
     },
     {
         icon: Flower2,
-        name: "Chamomile Extract",
-        origin: "Egypt",
-        benefit: "Soothing & Calming",
-        description: "Organic Egyptian chamomile flower extract that calms irritation, reduces redness, and soothes sensitive skin."
+        name: "Wildcrafted Botanicals",
+        origin: "Forests",
+        benefit: "Soothing & Rejuvenating",
+        description: "Hand-picked natural extracts that calm irritation, reduce redness, and offer gentle care for sensitive and compromised skin."
     },
     {
         icon: Shell,
-        name: "Squalane",
-        origin: "Olive-derived",
+        name: "Natural Beeswax",
+        origin: "Community Apiaries",
         benefit: "Moisture Lock",
-        description: "Plant-derived squalane from olives mimics your skin's natural oils, providing lightweight moisture without clogging pores."
+        description: "Creates a protective, breathable barrier on the skin that locks in moisture while allowing it to heal without clogging pores."
     },
     {
         icon: TreePine,
-        name: "Bakuchiol",
-        origin: "India",
-        benefit: "Natural Retinol Alternative",
-        description: "A gentle plant-based alternative to retinol. Reduces wrinkles and firms skin without irritation or sun sensitivity."
+        name: "Himalayan Spring Water",
+        origin: "High Altitudes",
+        benefit: "Pure Hydration",
+        description: "Crystal clear water sourced directly from uncontaminated springs, providing the purest base for our formulations."
     }
 ]
 
 const promises = [
-    "No parabens or sulfates",
-    "No synthetic fragrances",
-    "No artificial colors",
-    "No phthalates",
-    "No mineral oils",
-    "No formaldehyde",
+    "No synthetic pesticides",
+    "No artificial fragrances",
+    "No chemical preservatives",
     "No animal testing",
-    "No microplastics"
+    "100% natural extraction",
+    "Fair trade guaranteed",
+    "Community sourced",
+    "Zero waste processing"
 ]
 
 export default function IngredientsPage() {
@@ -128,7 +128,7 @@ export default function IngredientsPage() {
                         </div>
                         <div className="relative aspect-square rounded-3xl overflow-hidden ecovera-shadow">
                             <Image
-                                src="/images/bento-application.jpg"
+                                src="/images/healing-ritual-application.png"
                                 alt="Natural ingredients"
                                 fill
                                 className="object-cover"
@@ -150,10 +150,10 @@ export default function IngredientsPage() {
                         </h2>
                         <div className="space-y-4 text-muted-foreground leading-relaxed">
                             <p>
-                                We work directly with organic farms and cooperatives in over 12 countries. Every ingredient is traceable back to its source, ensuring the highest quality and ethical standards.
+                                We work directly with rural farming communities. Every batch of Artemisia is traceable back to its source, ensuring the highest quality, fair compensation for farmers, and ethical sourcing standards.
                             </p>
                             <p>
-                                Our botanists visit partner farms annually to verify organic practices, fair labor conditions, and sustainable harvesting methods. This hands-on approach ensures that every product you use is truly pure.
+                                Our supply chain promotes the utilization of idle land and supports the local agrarian economy. This community-centered approach ensures that every product you use actively contributes to sustainable rural development.
                             </p>
                         </div>
                     </div>

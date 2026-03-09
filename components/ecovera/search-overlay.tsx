@@ -5,18 +5,11 @@ import Link from "next/link"
 import { Search, X } from "lucide-react"
 
 const allProducts = [
-    { id: "radiance-serum", name: "Radiance Serum", category: "Serum", price: 68, image: "/images/products/serum-bottles-1.jpg" },
-    { id: "hydrating-serum", name: "Hydrating Serum", category: "Serum", price: 62, image: "/images/products/eye-serum-bottles.jpg" },
-    { id: "age-defense-serum", name: "Age Defense Serum", category: "Serum", price: 78, image: "/images/products/amber-dropper-bottles.jpg" },
-    { id: "glow-serum", name: "Glow Serum", category: "Serum", price: 58, image: "/images/products/spray-bottles.jpg" },
-    { id: "hydra-cream", name: "Hydra Cream", category: "Cream", price: 54, image: "/images/products/cream-jars-colored.jpg" },
-    { id: "gentle-cleanser", name: "Gentle Cleanser", category: "Cleanser", price: 38, image: "/images/products/tube-bottles.jpg" },
-    { id: "night-cream", name: "Night Cream", category: "Cream", price: 64, image: "/images/products/jars-wooden-lid.jpg" },
-    { id: "day-cream-spf", name: "Day Cream SPF 30", category: "Cream", price: 58, image: "/images/products/pump-bottles-lavender.jpg" },
-    { id: "renewal-oil", name: "Renewal Oil", category: "Oil", price: 72, image: "/images/products/amber-dropper-bottles.jpg" },
-    { id: "rosehip-oil", name: "Rosehip Oil", category: "Oil", price: 48, image: "/images/products/serum-bottles-1.png" },
-    { id: "jojoba-oil", name: "Jojoba Oil", category: "Oil", price: 42, image: "/images/products/spray-bottles.jpg" },
-    { id: "argan-oil", name: "Argan Oil", category: "Oil", price: 56, image: "/images/products/pump-bottles-cream.jpg" },
+    { id: "hand-sanitizer", name: "Titepati Hand Sanitizer", category: "Wellness & Health", price: 15, image: "/images/products/hand-sanitizer.jpg" },
+    { id: "mugwort-incense", name: "Tibetan Mugwort Incense", category: "Wellness & Health", price: 20, image: "/images/products/mugwort-incense.jpg" },
+    { id: "mugwort-oil", name: "Mugwort Essential Oil (50ml)", category: "Essential Oils", price: 35, image: "/images/products/mugwort-oil.jpg" },
+    { id: "titepati-soap", name: "Titepati Skin Treatment Soap", category: "Cosmetics", price: 12, image: "/images/products/titepati-soap.jpg" },
+    { id: "herbal-cosmetics", name: "Titepati Herbal Cosmetics Set", category: "Cosmetics", price: 85, image: "/images/products/herbal-cosmetics.jpg" },
 ]
 
 interface SearchOverlayProps {
