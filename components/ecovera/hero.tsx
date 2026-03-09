@@ -21,7 +21,7 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 w-full pt-20">
+      <div className="relative z-10 w-full pt-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="w-full lg:max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
             <span className="text-sm uppercase mb-6 block text-foreground animate-blur-in opacity-0 tracking-normal" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
