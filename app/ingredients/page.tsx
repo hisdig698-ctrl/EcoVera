@@ -120,7 +120,7 @@ export default function IngredientsPage() {
                             <div className="grid grid-cols-2 gap-3">
                                 {promises.map((promise) => (
                                     <div key={promise} className="flex items-center gap-2">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                                        <div className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
                                         <span className="text-sm text-foreground">{promise}</span>
                                     </div>
                                 ))}
@@ -133,6 +133,84 @@ export default function IngredientsPage() {
                                 fill
                                 className="object-cover"
                             />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Titepati Deep Dive */}
+            <section className="py-20 sm:py-24 bg-card">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-4xl mx-auto">
+                        <span className="text-sm tracking-[0.3em] uppercase text-primary mb-4 block text-center">
+                            About Titepati
+                        </span>
+                        <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-foreground mb-8 text-center text-balance">
+                            Artemisia Vulgaris: Nature&apos;s Healing Gift from Nepal
+                        </h2>
+                        
+                        <div className="space-y-8 text-muted-foreground leading-relaxed">
+                            <div>
+                                <h3 className="font-serif text-2xl text-foreground mb-4">What is Titepati?</h3>
+                                <p>
+                                    Titepati, scientifically known as Artemisia vulgaris, is a medicinal and aromatic plant widely found in Nepal. It grows naturally in hills and rural areas and has been used in traditional medicine for many generations. In Nepali culture, titepati is commonly used for religious purposes, herbal medicine, insect repellent, and spiritual cleansing. Because of its strong medicinal value and increasing demand for herbal products, titepati farming has great potential to become a sustainable agricultural business. Our team believes that by organizing farmers, improving cultivation methods, and developing value-added products, titepati can become a profitable income source for rural communities while also promoting natural and eco-friendly products.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3 className="font-serif text-2xl text-foreground mb-4">Market Demand</h3>
+                                <p>
+                                    The market demand for titepati is gradually increasing due to the growing popularity of herbal medicine and organic products. In local Nepali markets, dried titepati leaves can sell for approximately NPR 80–100 per kilogram depending on quality and season. If processed into products such as incense sticks (dhup), herbal powder, essential oil, or medicinal products, the value increases significantly. Herbal industries, Ayurvedic companies, and religious product manufacturers are the main buyers of titepati. Since the plant grows naturally and requires very little investment, farmers can earn good profit compared to many traditional crops. With proper marketing and product development, titepati can even be exported to international herbal markets.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3 className="font-serif text-2xl text-foreground mb-4">Sustainable Farming Methods</h3>
+                                <p>
+                                    Titepati farming is relatively easy and suitable for small farmers because the plant grows well in many types of soil and climates. It grows best in well-drained soil with moderate sunlight. Farmers can cultivate it through seeds or by planting small cuttings from mature plants. The land should first be prepared by clearing weeds and loosening the soil. After planting, the crop requires minimal irrigation because it is naturally drought-tolerant. Farmers mainly need to focus on occasional weeding and protecting the plants from livestock. Within about 4–6 months the plant becomes ready for harvesting. Leaves and tender stems are cut and then dried in shade to preserve their medicinal quality. Because it can regrow after cutting, farmers can harvest it multiple times in a year, making it an exceptionally productive and sustainable crop.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3 className="font-serif text-2xl text-foreground mb-4">Diverse Products & Applications</h3>
+                                <p className="mb-4">
+                                    Titepati has many uses and can be processed into various products that increase its market value:
+                                </p>
+                                <ul className="space-y-3 ml-4">
+                                    <li><span className="text-foreground font-semibold">Herbal Incense (Dhup)</span> - Widely used in homes and temples for religious rituals and spiritual cleansing.</li>
+                                    <li><span className="text-foreground font-semibold">Herbal Powder</span> - Used in traditional medicine for treating skin problems, wounds, and stomach issues.</li>
+                                    <li><span className="text-foreground font-semibold">Essential Oil</span> - Extracted from titepati leaves, used in aromatherapy, natural insect repellents, and herbal cosmetics.</li>
+                                    <li><span className="text-foreground font-semibold">Herbal Soap</span> - Therapeutic bars for skin treatment and healing.</li>
+                                    <li><span className="text-foreground font-semibold">Mosquito Repellent Products</span> - Natural alternatives to chemical insecticides.</li>
+                                    <li><span className="text-foreground font-semibold">Herbal Tea Mixtures</span> - For wellness and digestive health.</li>
+                                    <li><span className="text-foreground font-semibold">Mugwort Therapy Products (Moxibustion)</span> - Mugwort, made from titepati, is widely used in traditional therapy where dried mugwort (also known as mogja or moxa) is burned near acupuncture points to provide heat therapy, improve blood circulation, relieve pain, and support natural healing.</li>
+                                    <li><span className="text-foreground font-semibold">Organic Fertilizers</span> - Created from titepati residue for sustainable agriculture.</li>
+                                </ul>
+                                <p className="mt-4">
+                                    These value-added products create more employment opportunities and increase profits compared to selling raw leaves.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3 className="font-serif text-2xl text-foreground mb-4">Community Training & Education</h3>
+                                <p>
+                                    To successfully introduce titepati farming, it is important to communicate effectively with local farmers. Our team plans to organize community meetings, field demonstrations, and simple training programs. The training will explain the benefits of titepati cultivation, farming techniques, harvesting methods, and product processing. Demonstration plots can help farmers see the results directly, which increases trust and motivation. Educational materials such as posters, pamphlets, and short training videos in the Nepali language can make learning easier. Collaboration with agricultural experts, local cooperatives, and community leaders will also help farmers gain confidence and knowledge about this new opportunity.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3 className="font-serif text-2xl text-foreground mb-4">Marketing & Sales Strategy</h3>
+                                <p>
+                                    Selling titepati requires building connections with local markets, herbal industries, and religious product suppliers. Farmers can sell raw dried leaves directly to herbal companies or cooperatives. Another strategy is to form farmer groups or cooperatives that collect titepati from many farmers and sell it in bulk to large buyers. Creating branded products such as herbal incense, herbal powder, or natural mosquito repellent can also help attract customers. Marketing through social media, local fairs, and organic product stores will increase visibility. With proper packaging and branding, titepati products can reach national and even international markets.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3 className="font-serif text-2xl text-foreground mb-4">Why Titepati is a Sustainable Business</h3>
+                                <p>
+                                    Titepati farming has strong potential to become a sustainable business model. The plant grows easily, requires low investment, and supports eco-friendly agriculture. By combining farming, product processing, and effective marketing, rural communities can generate stable income. Our business model focuses on three main areas: farmer training, value-added product production, and market connection. Farmers will grow and supply the raw material, small processing units will convert it into products, and our team will help connect these products to markets. This approach not only creates economic opportunities but also promotes natural health products and environmental sustainability. The plant's ability to regrow after harvesting, minimal water requirements, and lack of need for synthetic chemicals make it an environmentally responsible choice that can contribute to UN Sustainable Development Goals including No Poverty, Good Health, Economic Growth, and Life on Land.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -9,6 +9,7 @@ import { Header } from "@/components/ecovera/header"
 import { Footer } from "@/components/ecovera/footer"
 import { useCart } from "@/components/ecovera/cart-context"
 import { useLanguage } from "@/components/ecovera/language-context"
+import { TitepatiInfo } from "@/components/ecovera/titepati-info"
 
 // Helper: convert digits to Nepali
 function toNepaliDigits(n: number): string {
@@ -453,6 +454,9 @@ export default function ProductPage() {
           </div>
         </div>
       </div>
+
+      {/* Titepati Information Section */}
+      <TitepatiInfo expanded={true} />
 
       <Footer />
     </main>
