@@ -11,7 +11,7 @@ const faqCategories = [
         items: [
             { q: "What is Artemisia Vulgaris (Titepati)?", a: "Artemisia Vulgaris, locally known as Titepati in Nepal, is a powerful medicinal herb. We use it as the core ingredient in our products for its natural anti-bacterial, anti-inflammatory, and healing properties." },
             { q: "Are EcoVera products safe for daily use?", a: "Yes! All our products, including the Hand Sanitizer, Soaps, and Cosmetics Set, are formulated with natural ingredients and are safe for daily use. We avoid harsh synthetic chemicals." },
-            { q: "How should I use the Tibetan Mugwort Incense?", a: "Light the tip of the incense stick, gently blow out the flame, and place it in a heat-resistant holder. It's excellent for air purification, meditation, and creating a calming environment." },
+            { q: "How should I use the Artemisia Incense?", a: "Light the tip of the incense stick, gently blow out the flame, and place it in a heat-resistant holder. It's excellent for air purification, meditation, and creating a calming environment." },
             { q: "Is the Mugwort Essential Oil pure?", a: "Absolutely. Our Mugwort Essential Oil is 100% pure and extracted using traditional distillation methods. We recommend diluting it with a carrier oil before applying directly to the skin." },
         ]
     },

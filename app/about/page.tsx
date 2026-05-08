@@ -3,6 +3,40 @@ import { Footer } from "@/components/ecovera/footer"
 import { Leaf, Heart, Globe, Sparkles, Recycle, Users } from "lucide-react"
 import Image from "next/image"
 
+type TeamMember = {
+  name: string
+  role: string
+  bio: string
+  image: string
+}
+
+const teamMembers: TeamMember[] = [
+  {
+    name: "Babita Giri",
+    role: "Co-Founder & COO",
+    bio: "Operations, partnerships & community impact",
+    image: "/images/story/team-member-1.jpg"
+  },
+  {
+    name: "Sandesh Mgr",
+    role: "Co-Founder & CMO",
+    bio: "Marketing, branding & business growth",
+    image: "/images/story/team-member-2.jpg"
+  },
+  {
+    name: "Siddanta Sodari",
+    role: "Co-Founder & CEO",
+    bio: "Strategy, leadership & product vision",
+    image: "/images/story/team-member-3.jpg"
+  },
+  {
+    name: "Nishan Thapa",
+    role: "Co-Founder & CTO",
+    bio: "Research, innovation & product development",
+    image: "/images/story/team-member-4.jpg"
+  }
+]
+
 const values = [
     {
         icon: Leaf,
@@ -234,6 +268,52 @@ export default function AboutPage() {
                                 The plant's ability to regrow after harvesting, minimal water requirements, and lack of need for synthetic chemicals make it an environmentally responsible choice that directly contributes to UN Sustainable Development Goals including No Poverty, Good Health, Economic Growth, and Life on Land.
                             </p>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Team */}
+            <section className="py-20 sm:py-24 bg-card">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-16">
+                        <span className="text-sm tracking-[0.3em] uppercase text-primary mb-4 block">
+                            The People Behind EcoVera
+                        </span>
+                        <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-foreground text-balance">
+                            Meet the Founders
+                        </h2>
+                    </div>
+
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-8">
+                        {teamMembers.map((member) => (
+                            <div
+                                key={member.name}
+                                className="group bg-background rounded-2xl sm:rounded-3xl overflow-hidden ecovera-shadow ecovera-transition hover:scale-[1.02]"
+                            >
+                                {/* Photo */}
+                                <div className="relative aspect-square overflow-hidden bg-muted">
+                                    <Image
+                                        src={member.image}
+                                        alt={member.name}
+                                        fill
+                                        className="object-cover object-top ecovera-transition group-hover:scale-105"
+                                    />
+                                </div>
+
+                                {/* Info */}
+                                <div className="p-4 sm:p-6">
+                                    <h3 className="font-serif text-base sm:text-xl text-foreground mb-1">
+                                        {member.name}
+                                    </h3>
+                                    <span className="inline-block text-[10px] sm:text-xs tracking-wide px-2.5 py-0.5 rounded-full bg-primary/10 text-primary mb-2 sm:mb-3">
+                                        {member.role}
+                                    </span>
+                                    <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                                        {member.bio}
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>

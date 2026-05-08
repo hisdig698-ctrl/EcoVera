@@ -6,9 +6,9 @@ import { Footer } from "@/components/ecovera/footer"
 import { Mail, MapPin, Phone, Send, Check } from "lucide-react"
 
 const contactInfo = [
-    { icon: Mail, label: "Email", value: "hello@ecovera.com", href: "mailto:hello@ecovera.com" },
-    { icon: Phone, label: "Phone", value: "+1 (555) 123-4567", href: "tel:+15551234567" },
-    { icon: MapPin, label: "Address", value: "123 Green Lane, Portland, OR 97201", href: null },
+    { icon: Mail, label: "Email", value: "hello@ecovera.com.np", href: "mailto:hello@ecovera.com.np" },
+    { icon: Phone, label: "Phone", value: "+977 9841-XXXXXX", href: "tel:+9779841000000" },
+    { icon: MapPin, label: "Address", value: "Kathmandu, Nepal", href: null },
 ]
 
 export default function ContactPage() {
@@ -64,9 +64,8 @@ export default function ContactPage() {
                             <div className="pt-6 border-t border-border/50">
                                 <h3 className="font-medium text-foreground mb-2">Business Hours</h3>
                                 <div className="space-y-1 text-sm text-muted-foreground">
-                                    <p>Monday – Friday: 9:00 AM – 6:00 PM PST</p>
-                                    <p>Saturday: 10:00 AM – 4:00 PM PST</p>
-                                    <p>Sunday: Closed</p>
+                                    <p>Sunday – Friday: 10:00 AM – 6:00 PM NPT</p>
+                                    <p>Saturday: Closed</p>
                                 </div>
                             </div>
                         </div>

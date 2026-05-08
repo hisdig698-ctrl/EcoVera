@@ -6,75 +6,75 @@ import { Star } from "lucide-react"
 const testimonials = [
   {
     id: 1,
-    name: "Sarah M.",
-    location: "New York",
+    name: "Priya S.",
+    location: "Kathmandu",
     rating: 5,
-    text: "My skin has never felt so soft and nourished. The Radiance Serum is now a permanent part of my morning routine.",
-    product: "Radiance Serum"
+    text: "The Titepati Hand Sanitizer is incredible. My skin stays soft even after using it all day — no dryness at all.",
+    product: "Titepati Hand Sanitizer"
   },
   {
     id: 2,
-    name: "Emma L.",
-    location: "Los Angeles",
+    name: "Anita T.",
+    location: "Pokhara",
     rating: 5,
-    text: "Finally, skincare that actually feels natural. No more harsh chemicals. My sensitive skin loves EcoVera products.",
-    product: "Gentle Cleanser"
+    text: "I've been using the Titepati Healing Soap for a month now. My skin has never felt this clean and healthy.",
+    product: "Titepati Healing Soap"
   },
   {
     id: 3,
-    name: "Jessica R.",
-    location: "Chicago",
+    name: "Ramesh K.",
+    location: "Lalitpur",
     rating: 5,
-    text: "The Hydra Cream is absolutely divine. It absorbs beautifully and keeps my skin hydrated all day long.",
-    product: "Hydra Cream"
+    text: "The Artemisia Incense fills the room with such a calming, natural scent. Perfect for morning meditation.",
+    product: "Artemisia Incense"
   },
   {
     id: 4,
-    name: "Maria K.",
-    location: "Miami",
+    name: "Sunita M.",
+    location: "Bhaktapur",
     rating: 5,
-    text: "I've tried countless serums but nothing compares to the glow I get from EcoVera. Absolutely transformative.",
-    product: "Glow Serum"
+    text: "Love the Artemisia Herbal Handwash! It lathers beautifully and my hands feel nourished all day.",
+    product: "Artemisia Herbal Handwash"
   },
   {
     id: 5,
-    name: "Sophie T.",
-    location: "Seattle",
+    name: "Bikash G.",
+    location: "Biratnagar",
     rating: 5,
-    text: "The packaging is beautiful and sustainable. I feel good knowing I'm choosing eco-friendly skincare.",
-    product: "Night Cream"
+    text: "The Mugwort Essential Oil is pure and potent. A few drops in my diffuser transforms the whole room.",
+    product: "Mugwort Essential Oil"
   },
   {
     id: 6,
-    name: "Anna P.",
-    location: "Boston",
+    name: "Meena R.",
+    location: "Chitwan",
     rating: 5,
-    text: "My acne-prone skin has cleared up since switching to EcoVera. Natural ingredients really make a difference.",
-    product: "Gentle Cleanser"
+    text: "Bought the 3-pack Titepati Soap bundle and it's great value. Each bar lasts a long time and smells amazing.",
+    product: "Titepati Soap Bundle (3-Pack)"
   },
   {
     id: 7,
-    name: "Claire B.",
-    location: "Austin",
+    name: "Dipak L.",
+    location: "Butwal",
     rating: 5,
-    text: "The texture of the Renewal Oil is perfection. It absorbs quickly and leaves my skin glowing.",
-    product: "Renewal Oil"
+    text: "The Artemisia Moxa Sticks are excellent quality. My acupuncturist was very impressed by the consistency.",
+    product: "Artemisia Moxa Sticks"
   },
   {
     id: 8,
-    name: "Lily W.",
-    location: "Portland",
+    name: "Kamala D.",
+    location: "Dharan",
     rating: 5,
-    text: "I love that EcoVera is cruelty-free and vegan. Great products that align with my values.",
-    product: "Hydra Cream"
+    text: "So happy to find natural products made right here in Nepal. EcoVera's quality matches any international brand.",
+    product: "Titepati Healing Soap"
   },
   {
     id: 9,
-    name: "Rachel D.",
-    location: "Denver",
+    name: "Sagar B.",
+    location: "Hetauda",
     rating: 5,
-    text: "The scent is so subtle and natural. No overpowering fragrances, just pure botanical goodness.",
-    product: "Radiance Serum"
+    text: "I love that EcoVera supports local farmers while making premium herbal products. Proud to buy Nepali!",
+    product: "Artemisia Incense"
   }
 ]
 

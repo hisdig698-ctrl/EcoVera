@@ -500,50 +500,54 @@ export default function InfoPage() {
                 <div className="relative w-full aspect-square bg-linear-to-br from-primary/20 to-primary/10 rounded-lg mb-4 overflow-hidden">
                   <Image
                     src="/images/story/team-member-1.jpg"
-                    alt="Team Founder"
+                    alt="Babita Giri"
                     fill
                     className="object-cover"
                     priority
                   />
                 </div>
-                <h4 className="font-semibold text-foreground text-sm">Founder & Vision</h4>
-                <p className="text-xs text-foreground/60">Leading the regenerative movement</p>
+                <h4 className="font-semibold text-foreground text-sm">Babita Giri</h4>
+                <p className="text-xs text-primary font-medium mb-0.5">Co-Founder & COO</p>
+                <p className="text-xs text-foreground/60">Operations, partnerships & community impact</p>
               </div>
               <div className="text-center">
                 <div className="relative w-full aspect-square bg-linear-to-br from-primary/20 to-primary/10 rounded-lg mb-4 overflow-hidden">
                   <Image
                     src="/images/story/team-member-2.jpg"
-                    alt="Operations Lead"
+                    alt="Sandesh Mgr"
                     fill
                     className="object-cover"
                   />
                 </div>
-                <h4 className="font-semibold text-foreground text-sm">Operations</h4>
-                <p className="text-xs text-foreground/60">Ensuring quality & scale</p>
+                <h4 className="font-semibold text-foreground text-sm">Sandesh Mgr</h4>
+                <p className="text-xs text-primary font-medium mb-0.5">Co-Founder & CMO</p>
+                <p className="text-xs text-foreground/60">Marketing, branding & business growth</p>
               </div>
               <div className="text-center">
                 <div className="relative w-full aspect-square bg-linear-to-br from-primary/20 to-primary/10 rounded-lg mb-4 overflow-hidden">
                   <Image
                     src="/images/story/team-member-3.jpg"
-                    alt="Community Manager"
+                    alt="Siddanta Sodari"
                     fill
                     className="object-cover"
                   />
                 </div>
-                <h4 className="font-semibold text-foreground text-sm">Community Relations</h4>
-                <p className="text-xs text-foreground/60">Farmer partnerships & impact</p>
+                <h4 className="font-semibold text-foreground text-sm">Siddanta Sodari</h4>
+                <p className="text-xs text-primary font-medium mb-0.5">Co-Founder & CEO</p>
+                <p className="text-xs text-foreground/60">Strategy, leadership & product vision</p>
               </div>
               <div className="text-center">
                 <div className="relative w-full aspect-square bg-linear-to-br from-primary/20 to-primary/10 rounded-lg mb-4 overflow-hidden">
                   <Image
                     src="/images/story/team-member-4.jpg"
-                    alt="Product Specialist"
+                    alt="Nishan Thapa"
                     fill
                     className="object-cover"
                   />
                 </div>
-                <h4 className="font-semibold text-foreground text-sm">Product Development</h4>
-                <p className="text-xs text-foreground/60">Formulation & quality</p>
+                <h4 className="font-semibold text-foreground text-sm">Nishan Thapa</h4>
+                <p className="text-xs text-primary font-medium mb-0.5">Co-Founder & CTO</p>
+                <p className="text-xs text-foreground/60">Research, innovation & product development</p>
               </div>
             </div>
           </div>

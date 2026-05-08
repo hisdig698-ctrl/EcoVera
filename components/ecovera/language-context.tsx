@@ -213,9 +213,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     // but we MUST provide the context to children during SSR
     return (
         <LanguageContext.Provider value={{ language, setLanguage, t }}>
-            <div style={{ visibility: mounted ? 'visible' : 'hidden' }}>
-                {children}
-            </div>
+            {children}
         </LanguageContext.Provider>
     )
 }

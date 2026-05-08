@@ -15,19 +15,39 @@ const products = [
     id: "hand-sanitizer",
     name: { en: "Titepati Hand Sanitizer", ne: "टिटेपाटी ह्यान्ड स्यानिटाइजर" },
     description: { en: "Kills 99.9% of germs with natural extracts", ne: "प्राकृतिक अर्कले ९९.९% जीवाणु मार्छ" },
-    price: 15,
-    originalPrice: 18,
+    price: 125,
+    originalPrice: 150,
     image: "/images/products/hand-sanitizer.jpg",
     badgeKey: "products.bestseller",
     category: "wellness" as Category
   },
   {
     id: "mugwort-incense",
-    name: { en: "Tibetan Mugwort Incense", ne: "तिब्बती मगवर्ट धूप" },
-    description: { en: "Traditional herbal incense for cleansing", ne: "सफाइको लागि परम्परागत जडीबुटी धूप" },
-    price: 25,
+    name: { en: "Artemisia Incense", ne: "आर्टेमिसिया धूप" },
+    description: { en: "Pure natural incense for purification and wellness (20 sticks)", ne: "शुद्धिकरण र कल्याणको लागि शुद्ध प्राकृतिक धूप (२० स्टिक)" },
+    price: 150,
     originalPrice: null,
     image: "/images/products/mugwort-incense.jpg",
+    badgeKey: "products.premium",
+    category: "wellness" as Category
+  },
+  {
+    id: "artemisia-moxa",
+    name: { en: "Artemisia Moxa Sticks", ne: "आर्टेमिसिया मोक्सा स्टिक्स" },
+    description: { en: "Traditional mugwort moxa for therapeutic heat therapy (10 sticks)", ne: "उपचारात्मक ताप थेरापीको लागि परम्परागत मगवर्ट मोक्सा (१० स्टिक)" },
+    price: 850,
+    originalPrice: null,
+    image: "/images/products/moxa.png",
+    badgeKey: "products.new",
+    category: "wellness" as Category
+  },
+  {
+    id: "artemisia-handwash",
+    name: { en: "Artemisia Herbal Handwash", ne: "आर्टेमिसिया जडीबुटी हाथ धोने सामान" },
+    description: { en: "Gentle botanical cleansing with natural Artemisia extract (300ml)", ne: "प्राकृतिक आर्टेमिसिया अर्कसँग कोमल वानस्पतिक सफाइ (३००मिलि)" },
+    price: 215,
+    originalPrice: null,
+    image: "/images/products/handwash.png",
     badgeKey: "products.new",
     category: "wellness" as Category
   },
@@ -36,9 +56,9 @@ const products = [
     id: "mugwort-oil",
     name: { en: "Mugwort Essential Oil", ne: "मगवर्ट एसेन्सियल तेल" },
     description: { en: "Pure Artemisia Vulgaris extract (50ml)", ne: "शुद्ध आर्टेमिसिया भल्गारिस अर्क (५०मिलि)" },
-    price: 45,
+    price: 1400,
     originalPrice: null,
-    image: "/images/products/mugwort-oil.jpg",
+    image: "/images/products/oil.png",
     badgeKey: "products.premium",
     category: "essential-oils" as Category
   },
@@ -49,7 +69,7 @@ const products = [
     description: { en: "Premium Artemisia soap bar (100g) - Skin treatment & healing", ne: "प्रिमियम आर्टेमिसिया साबुन - छाला उपचार र निको पार्ने" },
     price: 120,
     originalPrice: null,
-    image: "/images/products/titepati-soap-real.jpg",
+    image: "/images/products/titepati-soap.jpg",
     badgeKey: "products.bestseller",
     category: "cosmetics" as Category
   },
@@ -59,7 +79,7 @@ const products = [
     description: { en: "Three premium Artemisia soap bars for complete skin care", ne: "पूर्ण छाला हेरमेलको लागि तीन प्रिमियम आर्टेमिसिया साबुन" },
     price: 320,
     originalPrice: 360,
-    image: "/images/products/titepati-soap-real.jpg",
+    image: "/images/products/titepati-soap.jpg",
     badgeKey: "products.sale",
     category: "cosmetics" as Category
   },
@@ -69,18 +89,8 @@ const products = [
     description: { en: "Six premium Artemisia soap bars - Perfect for family", ne: "छ: प्रिमियम आर्टेमिसिया साबुन - परिवारको लागि आदर्श" },
     price: 600,
     originalPrice: 720,
-    image: "/images/products/titepati-soap-real.jpg",
+    image: "/images/products/titepati-soap.jpg",
     badgeKey: "products.sale",
-    category: "cosmetics" as Category
-  },
-  {
-    id: "herbal-cosmetics-set",
-    name: { en: "Titepati Herbal Cosmetics Set", ne: "टिटेपाटी जडीबुटी सौन्दर्य सेट" },
-    description: { en: "Complete skincare set with soap, face wash, and toner", ne: "साबुन, फेस वाश, र टोनर सहित पूर्ण छाला सेट" },
-    price: 450,
-    originalPrice: 550,
-    image: "/images/products/herbal-cosmetics.jpg",
-    badgeKey: "products.premium",
     category: "cosmetics" as Category
   }
 ]

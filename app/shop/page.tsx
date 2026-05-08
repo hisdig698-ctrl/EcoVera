@@ -15,19 +15,39 @@ const products = [
     id: "hand-sanitizer",
     name: "Titepati Hand Sanitizer",
     description: "Kills 99.9% of germs with natural extracts",
-    price: 15,
-    originalPrice: 18,
+    price: 125,
+    originalPrice: 150,
     image: "/images/products/hand-sanitizer.jpg",
     badge: "Bestseller",
     category: "wellness"
   },
   {
     id: "mugwort-incense",
-    name: "Tibetan Mugwort Incense",
-    description: "Traditional herbal incense for cleansing",
-    price: 25,
+    name: "Artemisia Incense",
+    description: "Pure natural incense for purification and wellness (20 sticks)",
+    price: 150,
     originalPrice: null,
     image: "/images/products/mugwort-incense.jpg",
+    badge: "Premium",
+    category: "wellness"
+  },
+  {
+    id: "artemisia-moxa",
+    name: "Artemisia Moxa Sticks",
+    description: "Traditional mugwort moxa for therapeutic heat therapy (10 sticks)",
+    price: 850,
+    originalPrice: null,
+    image: "/images/products/moxa.png",
+    badge: "New",
+    category: "wellness"
+  },
+  {
+    id: "artemisia-handwash",
+    name: "Artemisia Herbal Handwash",
+    description: "Gentle botanical cleansing with natural Artemisia extract (300ml)",
+    price: 215,
+    originalPrice: null,
+    image: "/images/products/handwash.png",
     badge: "New",
     category: "wellness"
   },
@@ -36,9 +56,9 @@ const products = [
     id: "mugwort-oil",
     name: "Mugwort Essential Oil",
     description: "Pure Artemisia Vulgaris extract (50ml)",
-    price: 45,
+    price: 1400,
     originalPrice: null,
-    image: "/images/products/mugwort-oil.jpg",
+    image: "/images/products/oil.png",
     badge: "Premium",
     category: "essential-oils"
   },
@@ -49,7 +69,7 @@ const products = [
     description: "Premium Artemisia soap bar (100g) - Skin treatment & healing",
     price: 120,
     originalPrice: null,
-    image: "/images/products/titepati-soap-real.jpg",
+    image: "/images/products/titepati-soap.jpg",
     badge: "Bestseller",
     category: "cosmetics"
   },
@@ -59,7 +79,7 @@ const products = [
     description: "Three premium Artemisia soap bars for complete skin care",
     price: 320,
     originalPrice: 360,
-    image: "/images/products/titepati-soap-real.jpg",
+    image: "/images/products/titepati-soap.jpg",
     badge: "Save ₹40",
     category: "cosmetics"
   },
@@ -69,18 +89,8 @@ const products = [
     description: "Six premium Artemisia soap bars - Perfect for family",
     price: 600,
     originalPrice: 720,
-    image: "/images/products/titepati-soap-real.jpg",
+    image: "/images/products/titepati-soap.jpg",
     badge: "Save ₹120",
-    category: "cosmetics"
-  },
-  {
-    id: "herbal-cosmetics-set",
-    name: "Titepati Herbal Cosmetics Set",
-    description: "Complete skincare set with soap, face wash, and toner",
-    price: 450,
-    originalPrice: 550,
-    image: "/images/products/herbal-cosmetics.jpg",
-    badge: "Complete Kit",
     category: "cosmetics"
   }
 ]

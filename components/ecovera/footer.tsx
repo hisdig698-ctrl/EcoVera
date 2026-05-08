@@ -132,7 +132,7 @@ export function Footer() {
         <div className="pt-10 border-t border-border/50">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Ecovera. {t("footer.rights")}
+              © {new Date().getFullYear()} EcoVera. {t("footer.rights")}
             </p>
             <div className="flex gap-6">
               <Link href="/privacy" className="text-sm text-muted-foreground hover:text-foreground ecovera-transition">

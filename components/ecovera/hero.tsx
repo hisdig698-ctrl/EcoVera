@@ -29,10 +29,10 @@ export function Hero() {
             <span className="text-sm uppercase mb-6 block text-white/90 animate-blur-in opacity-0 tracking-normal font-semibold" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
               EcoVera Artemisia™ BioSolution
             </span>
-            <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.1] mb-6 text-balance text-white">
+            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.1] mb-6 text-balance text-white">
               <span className="block animate-blur-in opacity-0 font-semibold" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>Empowering Farmers.</span>
               <span className="block animate-blur-in opacity-0 font-semibold xl:text-8xl text-5xl sm:text-6xl md:text-7xl" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>Healing Naturally.</span>
-            </h2>
+            </h1>
             <p className="text-lg leading-relaxed mb-10 max-w-md mx-auto lg:mx-0 text-white/85 animate-blur-in opacity-0" style={{ animationDelay: '0.8s', animationFillMode: 'forwards' }}>
               A sustainable agribusiness transforming underutilized rural resources into premium, health-oriented Artemisia products.
             </p>

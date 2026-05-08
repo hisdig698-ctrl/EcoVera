@@ -41,8 +41,8 @@ const products: Record<string, ProductData> = {
       en: "EcoVera's Titepati Hand Sanitizer features natural Artemisia extracts. It kills 99.9% of germs while leaving your skin feeling soft, combining powerful antimicrobial properties with deep hydration.",
       ne: "EcoVera को टिटेपाटी ह्यान्ड स्यानिटाइजरमा प्राकृतिक आर्टेमिसिया अर्क छ। यसले ९९.९% जीवाणु मार्छ र तपाईंको छालालाई कोमल राख्छ।"
     },
-    price: 15,
-    originalPrice: 18,
+    price: 125,
+    originalPrice: 150,
     image: "/images/products/hand-sanitizer.jpg",
     sizes: ["100ml", "500ml"],
     details: {
@@ -64,31 +64,89 @@ const products: Record<string, ProductData> = {
   },
   "mugwort-incense": {
     id: "mugwort-incense",
-    name: { en: "Tibetan Mugwort Incense", ne: "तिब्बती मगवर्ट धूप" },
-    tagline: { en: "Purify your space with ancient wisdom", ne: "प्राचीन ज्ञानले तपाईंको ठाउँ शुद्ध गर्नुहोस्" },
+    name: { en: "Artemisia Incense", ne: "आर्टेमिसिया धूप" },
+    tagline: { en: "Pure natural purification", ne: "शुद्ध प्राकृतिक शुद्धिकरण" },
     description: {
-      en: "Hand-rolled Tibetan incense made from sustainably harvested Mugwort. Used traditionally for clearing negative energy, meditation, and relaxation.",
-      ne: "दिगो रूपमा कटनी गरिएको मगवर्टबाट हातले बनाइएको तिब्बती धूप। परम्परागत रूपमा नकारात्मक ऊर्जा हटाउन, ध्यान र आराम गर्न प्रयोग गरिन्छ।"
+      en: "Pure Artemisia incense made from sustainably harvested mugwort. Used traditionally for clearing negative energy, meditation, spiritual rituals, and creating a sacred atmosphere.",
+      ne: "दिगो रूपमा कटनी गरिएको मगवर्टबाट बनाइएको शुद्ध आर्टेमिसिया धूप। परम्परागत रूपमा नकारात्मक ऊर्जा हटाउन, ध्यान र आत्मिक अनुष्ठानमा प्रयोग गरिन्छ।"
     },
-    price: 25,
+    price: 150,
     originalPrice: null,
-    image: "/images/products/mugwort-incense.jpg",
-    sizes: ["Pack of 30", "Pack of 60"],
+    image: "/images/products/artemisia-incense.jpg",
+    sizes: ["Pack of 20"],
     details: {
-      en: "Our Tibetan Mugwort Incense is crafted using traditional techniques that have been passed down for generations. The main component, Titepati (Black Sage), is renowned in Ayurvedic medicine for its purifying and therapeutic aroma. Buying this product directly supports community-based labor resources.",
-      ne: "हाम्रो तिब्बती मगवर्ट धूप पिंढीपिंढी चलिआएको परम्परागत प्रविधिहरू प्रयोग गरेर बनाइएको हो। मुख्य घटक, टिटेपाटी, आयुर्वेदिक चिकित्सामा शुद्धिकरण र उपचारात्मक सुगन्धको लागि प्रसिद्ध छ।"
+      en: "Our Artemisia Incense is handcrafted using traditional techniques with pure Titepati leaves. Each stick is carefully prepared to deliver the authentic therapeutic aroma prized in Ayurvedic and spiritual practices. Made from 100% natural Artemisia with no artificial additives.",
+      ne: "हाम्रो आर्टेमिसिया धूप शुद्ध टिटेपाटी पातहरूको साथ परम्परागत तकनीक प्रयोग गरेर हाथले बनाइएको हो। आयुर्वेदिक र आध्यात्मिक अभ्यासमा प्रशंसित प्रामाणिक उपचारात्मक सुगन्ध प्रदान गर्न प्रत्येक स्टिक सावधानीपूर्वक तैयार गरिएको छ।"
     },
     howToUse: {
-      en: "Light the tip of the incense stick, gently blow out the flame to allow it to smolder. Place in a heat-proof incense holder. Never leave unattended. Perfect for meditation, yoga, or unwinding before bed.",
-      ne: "धूपको टुप्पोमा आगो लगाउनुहोस्, बिस्तारै फुकेर ज्वाला निभाउनुहोस्। ताप-प्रूफ धूपदानीमा राख्नुहोस्। कहिल्यै एक्लो नछोड्नुहोस्। ध्यान, योग, वा सुत्नु अघि आराम गर्नको लागि उत्तम।"
+      en: "Light the tip of the incense stick, gently blow out the flame to allow it to smolder. Place in a heat-proof incense holder. Never leave unattended. Perfect for meditation, yoga, prayer, or creating a peaceful atmosphere.",
+      ne: "धूपको टुप्पोमा आगो लगाउनुहोस्, बिस्तारै फुकेर ज्वाला निभाउनुहोस्। ताप-प्रूफ धूपदानीमा राख्नुहोस्। कहिल्यै एक्लो नछोड्नुहोस्। ध्यान, योग, प्रार्थना वा शान्तिपूर्ण माहोल सृष्टिको लागि उत्तम।"
     },
     ingredients: {
-      en: "Artemisia Vulgaris (Mugwort) Leaves, Natural Herbal Binders, Sandalwood Base. No artificial fragrances or synthetic fillers.",
-      ne: "आर्टेमिसिया भल्गारिस (मगवर्ट) पातहरू, प्राकृतिक जडीबुटी बाइन्डरहरू, चन्दन बेस। कुनै कृत्रिम सुगन्ध वा सिंथेटिक फिलरहरू छैनन्।"
+      en: "100% Artemisia Vulgaris (Mugwort) Leaves with natural herbal binders. No artificial fragrances, synthetic fillers, or harmful chemicals.",
+      ne: "१००% आर्टेमिसिया भल्गारिस (मगवर्ट) पातहरू प्राकृतिक जडीबुटी बाइन्डरहरूसँग। कुनै कृत्रिम सुगन्ध, सिंथेटिक फिलर वा हानिकारक रसायन छैनन्।"
     },
     delivery: {
-      en: "Free standard shipping on orders over $50. Comes securely wrapped in eco-friendly protective packaging.",
-      ne: "रु. ५,००० भन्दा माथिको अर्डरमा निःशुल्क डेलिभरी। वातावरण-मैत्री सुरक्षात्मक प्याकेजिङमा सुरक्षित रूपमा बेरिएको।"
+      en: "Free standard shipping on orders over $50. Handcrafted in Nepal and packaged in eco-friendly protective materials.",
+      ne: "रु. ५,००० भन्दा माथिको अर्डरमा निःशुल्क डेलिभरी। नेपालमा हाथले बनाइएको र पर्यावरण-मैत्री सामग्रीमा प्याक गरिएको।"
+    }
+  },
+  "artemisia-moxa": {
+    id: "artemisia-moxa",
+    name: { en: "Artemisia Moxa Sticks", ne: "आर्टेमिसिया मोक्सा स्टिक्स" },
+    tagline: { en: "Traditional heat therapy wellness", ne: "परम्परागत ताप चिकित्सा कल्याण" },
+    description: {
+      en: "Pure Artemisia moxa sticks for traditional moxibustion therapy. These premium therapeutic sticks provide gentle heat therapy to support wellness, improve circulation, and promote natural healing.",
+      ne: "परम्परागत मोक्सिबस्टन थेरापीको लागि शुद्ध आर्टेमिसिया मोक्सा स्टिक्स। यी प्रिमियम उपचारात्मक स्टिक्सले कल्याण समर्थन, परिसंचरण सुधार र प्राकृतिक उपचार प्रवर्द्धन गर्न कोमल ताप चिकित्सा प्रदान गर्छन्।"
+    },
+    price: 850,
+    originalPrice: null,
+    image: "/images/products/artemisia-moxa.jpg",
+    sizes: ["Pack of 10"],
+    details: {
+      en: "Our Artemisia Moxa is prepared using traditional methods and consists of pure dried mugwort (Titepati). Used in acupuncture therapy and traditional wellness practices for thousands of years, moxa provides warming, therapeutic benefits. Each pack contains 10 premium handcrafted sticks.",
+      ne: "हाम्रो आर्टेमिसिया मोक्सा परम्परागत विधि प्रयोग गरेर तैयार गरिएको छ र शुद्ध सुकाएको मगवर्ट (टिटेपाटी) को समावेश गर्छ। हजारहरु वर्षको लागि एक्यूपङ्क्चर थेरापी र परम्परागत कल्याण अभ्यासमा प्रयोग गरिन्छ।"
+    },
+    howToUse: {
+      en: "Use moxa sticks as part of moxibustion therapy under professional guidance. The stick is lit and held at a safe distance above acupuncture points or affected areas to provide gentle warming therapy. Always use in a well-ventilated space.",
+      ne: "पेशेवर मार्गदर्शनमा मोक्सिबस्टन थेरापीको अंशको रूपमा मोक्सा स्टिक्स प्रयोग गर्नुहोस्। स्टिकलाई जलाइएको छ र एक्यूपङ्क्चर पोइन्ट वा प्रभावित क्षेत्रहरू माथि सुरक्षित दूरीमा राखिन्छ।"
+    },
+    ingredients: {
+      en: "100% Pure Artemisia Vulgaris (Mugwort/Titepati) - Traditionally prepared and naturally dried. No additives or synthetic materials.",
+      ne: "१००% शुद्ध आर्टेमिसिया भल्गारिस (मगवर्ट/टिटेपाटी) - परम्परागत रूपमा तैयार र प्राकृतिक रूपमा सुकाएको। कोनै योजक वा सिंथेटिक सामग्री छैनन्।"
+    },
+    delivery: {
+      en: "Free standard shipping on orders over $50. Handcrafted in Nepal with premium quality assurance.",
+      ne: "रु. ५,००० भन्दा माथिको अर्डरमा निःशुल्क डेलिभरी। नेपालमा हाथले बनाइएको र प्रिमियम गुणस्तर आश्वस्ततासँग।"
+    }
+  },
+  "artemisia-handwash": {
+    id: "artemisia-handwash",
+    name: { en: "Artemisia Herbal Handwash", ne: "आर्टेमिसिया जडीबुटी हाथ धोने सामान" },
+    tagline: { en: "Gentle botanical cleansing", ne: "कोमल वानस्पतिक सफाइ" },
+    description: {
+      en: "Gentle yet effective herbal handwash enriched with natural Artemisia extract. This botanical formula purifies and refreshes while protecting your skin with natural antimicrobial benefits.",
+      ne: "प्राकृतिक आर्टेमिसिया अर्कसँग समृद्ध कोमल तर प्रभावी जडीबुटी हाथ धोने सामान। यो वानस्पतिक सूत्र आपको छालालाई प्राकृतिक सूक्ष्मजीवरोधी लाभहरूसँग सुरक्षा गर्दै शुद्ध र ताज़ा गर्छ।"
+    },
+    price: 215,
+    originalPrice: null,
+    image: "/images/products/artemisia-handwash.jpg",
+    sizes: ["300ml"],
+    details: {
+      en: "This premium handwash combines the cleansing power of natural botanicals with the therapeutic benefits of Titepati. Formulated to gently remove dirt and germs while maintaining skin's natural pH balance and preventing dryness. Perfect for daily hand care.",
+      ne: "यो प्रिमियम हाथ धोने सामान प्राकृतिक वनस्पतीको सफाइ शक्तिलाई टिटेपाटीको उपचारात्मक लाभहरूसँग जोड्छ। छालाको प्राकृतिक pH सन्तुलन बनाए राख्दै र सुखा रोकदै मैल र जीवाणु हटाउन कोमलतापूर्वक तैयार गरिएको।"
+    },
+    howToUse: {
+      en: "Wet hands with water, pump a small amount of handwash onto palm. Lather well, covering all surfaces including between fingers. Rinse thoroughly with clean water. Use throughout the day as needed.",
+      ne: "हातलाई पानीले भिजाउनुहोस्, हत्केलामा थोरै मात्रामा हाथ धोने सामान पम्प गर्नुहोस्। औंलाहरूको बीचमा समेत सबै सतहहरू ढाक्दै राम्ररी फेसिएर धुनुहोस्। स्वच्छ पानीले राम्ररी धुनुहोस्। दिनभर आवश्यकतानुसार प्रयोग गर्नुहोस्।"
+    },
+    ingredients: {
+      en: "Aqua, Botanical Surfactants, Artemisia Vulgaris Extract, Glycerin, Natural Essential Oils, Aloe Vera Extract, Vitamin E. No harsh chemicals or synthetic fragrances.",
+      ne: "पानी, वानस्पतिक सर्फेक्ट्यान्ट, आर्टेमिसिया भल्गारिस अर्क, ग्लिसरिन, प्राकृतिक एसेन्सियल तेलहरू, एलोभेरा अर्क, भिटामिन E। कोनै कठोर रसायन वा सिंथेटिक सुगन्ध छैनन्।"
+    },
+    delivery: {
+      en: "Free standard shipping on orders over $50. Eco-friendly packaging that's recyclable and plastic-conscious.",
+      ne: "रु. ५,००० भन्दा माथिको अर्डरमा निःशुल्क डेलिभरी। पुनर्चक्रण योग्य र प्लास्टिक-सचेत पर्यावरण-मैत्री प्याकेजिङ।"
     }
   },
   "mugwort-oil": {
@@ -99,7 +157,7 @@ const products: Record<string, ProductData> = {
       en: "Pure, high-grade Mugwort essential oil. A powerful therapeutic extract known for its calming, anti-inflammatory, and antimicrobial benefits.",
       ne: "शुद्ध, उच्च गुणस्तरको मगवर्ट एसेन्सियल तेल। शान्त गर्ने, सूजन विरोधी, र सूक्ष्मजीवरोधी फाइदाहरूका लागि चिनिने शक्तिशाली उपचारात्मक अर्क।"
     },
-    price: 45,
+    price: 1400,
     originalPrice: null,
     image: "/images/products/mugwort-oil.jpg",
     sizes: ["15ml", "50ml"],
@@ -128,9 +186,9 @@ const products: Record<string, ProductData> = {
       en: "A premium Ayurvedic Okhati therapeutic soap. Gently cleanses while treating common skin conditions using natural Titepati extracts.",
       ne: "एक प्रिमियम आयुर्वेदिक ओखति उपचार साबुन। प्राकृतिक टिटेपाटी अर्कहरू प्रयोग गरेर सामान्य छाला समस्याहरूको उपचार गर्दै कोमलतापूर्वक सफा गर्छ।"
     },
-    price: 12,
+    price: 120,
     originalPrice: null,
-    image: "/images/products/titepati-soap.jpg",
+    image: "/images/products/titepati-soap-real.jpg",
     sizes: ["125g"],
     details: {
       en: "This artisanal soap combines the healing power of Mugwort with traditional Ayurvedic botanicals. It helps soothe irritated skin, reduce inflammation, and combat acne. Every purchase supports our SDG goals of providing natural health products and decent work to rural communities.",
@@ -149,6 +207,64 @@ const products: Record<string, ProductData> = {
       ne: "रु. ५,००० भन्दा माथिको अर्डरमा निःशुल्क डेलिभरी। १००% बायोडिग्रेडेबल कागज प्याकेजिङमा पठाइएको।"
     }
   },
+  "titepati-soap-bundle-3": {
+    id: "titepati-soap-bundle-3",
+    name: { en: "Titepati Soap Bundle (3-Pack)", ne: "टिटेपाटी साबुन बन्डल (३ पीस)" },
+    tagline: { en: "Complete skin care value", ne: "पूर्ण छाला हेरचाह मूल्य" },
+    description: {
+      en: "Three premium Artemisia soap bars for complete skin care. Save Rs. 40 on this popular bundle — perfect for stocking up or gifting.",
+      ne: "पूर्ण छाला हेरमेलको लागि तीन प्रिमियम आर्टेमिसिया साबुन। यो लोकप्रिय बन्डलमा रु. ४० बचत गर्नुहोस् — स्टक अप वा उपहार दिनको लागि उत्तम।"
+    },
+    price: 320,
+    originalPrice: 360,
+    image: "/images/products/titepati-soap.jpg",
+    sizes: ["3 × 100g"],
+    details: {
+      en: "This bundle includes three bars of our premium Titepati Healing Soap. Each bar combines the healing power of Mugwort with traditional Ayurvedic botanicals, helping soothe irritated skin, reduce inflammation, and combat acne. Great value for regular users.",
+      ne: "यो बन्डलमा हाम्रो प्रिमियम टिटेपाटी हिलिङ साबुनका तीन बार समावेश छन्। प्रत्येक बारले मगवर्टको उपचार शक्ति र परम्परागत आयुर्वेदिक वनस्पतिहरूसँग जोड्छ।"
+    },
+    howToUse: {
+      en: "Lather with warm water and massage gently into the skin. Rinse thoroughly. Gentle enough for daily use on face and body.",
+      ne: "न्यानो पानीले फिज बनाएर छालामा बिस्तारै मालिश गर्नुहोस्। राम्ररी धुनुहोस्।"
+    },
+    ingredients: {
+      en: "Saponified Coconut Oil, Palm Oil (Sustainable), Artemisia Vulgaris Extract, Neem Extract, Essential Oil Blend, Aqua.",
+      ne: "स्यापोनिफाइड नरिवल तेल, पाम तेल (दिगो), आर्टेमिसिया भल्गारिस अर्क, नीम अर्क, एसेन्सियल तेल मिश्रण, एक्वा।"
+    },
+    delivery: {
+      en: "Free standard shipping on orders over Rs. 5,000. Shipped in 100% biodegradable paper packaging.",
+      ne: "रु. ५,००० भन्दा माथिको अर्डरमा निःशुल्क डेलिभरी। १००% बायोडिग्रेडेबल कागज प्याकेजिङमा पठाइएको।"
+    }
+  },
+  "titepati-soap-bundle-6": {
+    id: "titepati-soap-bundle-6",
+    name: { en: "Titepati Soap Bundle (6-Pack)", ne: "टिटेपाटी साबुन बन्डल (६ पीस)" },
+    tagline: { en: "Family-size natural healing", ne: "परिवार-आकार प्राकृतिक उपचार" },
+    description: {
+      en: "Six premium Artemisia soap bars — perfect for the whole family. Save Rs. 120 with this best-value bundle.",
+      ne: "छ: प्रिमियम आर्टेमिसिया साबुन — पूरै परिवारको लागि आदर्श। यो सर्वोत्तम मूल्य बन्डलमा रु. १२० बचत गर्नुहोस्।"
+    },
+    price: 600,
+    originalPrice: 720,
+    image: "/images/products/titepati-soap.jpg",
+    sizes: ["6 × 100g"],
+    details: {
+      en: "Six bars of our premium Titepati Healing Soap at the best per-unit price. Ideal for families or anyone who has made Titepati soap a staple of their daily skincare routine.",
+      ne: "सर्वोत्तम प्रति-एकाइ मूल्यमा हाम्रो प्रिमियम टिटेपाटी हिलिङ साबुनका छ बार। परिवारहरू वा जो कोहीको लागि आदर्श जसले टिटेपाटी साबुनलाई आफ्नो दैनिक छाला हेरचाहको मुख्य अंग बनाएका छन्।"
+    },
+    howToUse: {
+      en: "Lather with warm water and massage gently into the skin. Rinse thoroughly. Gentle enough for daily use on face and body.",
+      ne: "न्यानो पानीले फिज बनाएर छालामा बिस्तारै मालिश गर्नुहोस्। राम्ररी धुनुहोस्।"
+    },
+    ingredients: {
+      en: "Saponified Coconut Oil, Palm Oil (Sustainable), Artemisia Vulgaris Extract, Neem Extract, Essential Oil Blend, Aqua.",
+      ne: "स्यापोनिफाइड नरिवल तेल, पाम तेल (दिगो), आर्टेमिसिया भल्गारिस अर्क, नीम अर्क, एसेन्सियल तेल मिश्रण, एक्वा।"
+    },
+    delivery: {
+      en: "Free standard shipping on orders over Rs. 5,000. Shipped in 100% biodegradable paper packaging.",
+      ne: "रु. ५,००० भन्दा माथिको अर्डरमा निःशुल्क डेलिभरी। १००% बायोडिग्रेडेबल कागज प्याकेजिङमा पठाइएको।"
+    }
+  },
   "herbal-cosmetics-set": {
     id: "herbal-cosmetics-set",
     name: { en: "Titepati Herbal Cosmetics Set", ne: "टिटेपाटी जडीबुटी सौन्दर्य सेट" },
@@ -157,8 +273,8 @@ const products: Record<string, ProductData> = {
       en: "Experience the full spectrum of Artemisia's benefits with our complete skincare bundle featuring a glow skin toner, face wash, and moisturizer.",
       ne: "ग्लो स्किन टोनर, फेस वाश, र मोइस्चराइजर भएको हाम्रो पूर्ण स्किनकेयर बन्डलसँग आर्टेमिसियाका फाइदाहरूको पूर्ण स्पेक्ट्रम अनुभव गर्नुहोस्।"
     },
-    price: 85,
-    originalPrice: 110,
+    price: 450,
+    originalPrice: 550,
     image: "/images/products/herbal-cosmetics.jpg",
     sizes: ["Standard Bundle"],
     details: {

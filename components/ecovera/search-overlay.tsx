@@ -5,11 +5,15 @@ import Link from "next/link"
 import { Search, X } from "lucide-react"
 
 const allProducts = [
-    { id: "hand-sanitizer", name: "Titepati Hand Sanitizer", category: "Wellness & Health", price: 15, image: "/images/products/hand-sanitizer.jpg" },
-    { id: "mugwort-incense", name: "Tibetan Mugwort Incense", category: "Wellness & Health", price: 20, image: "/images/products/mugwort-incense.jpg" },
-    { id: "mugwort-oil", name: "Mugwort Essential Oil (50ml)", category: "Essential Oils", price: 35, image: "/images/products/mugwort-oil.jpg" },
-    { id: "titepati-soap", name: "Titepati Skin Treatment Soap", category: "Cosmetics", price: 12, image: "/images/products/titepati-soap.jpg" },
-    { id: "herbal-cosmetics", name: "Titepati Herbal Cosmetics Set", category: "Cosmetics", price: 85, image: "/images/products/herbal-cosmetics.jpg" },
+    { id: "hand-sanitizer", name: "Titepati Hand Sanitizer", category: "Wellness & Health", price: 125, image: "/images/products/hand-sanitizer.jpg" },
+    { id: "mugwort-incense", name: "Artemisia Incense", category: "Wellness & Health", price: 150, image: "/images/products/mugwort-incense.jpg" },
+    { id: "artemisia-moxa", name: "Artemisia Moxa Sticks", category: "Wellness & Health", price: 850, image: "/images/products/moxa.png" },
+    { id: "artemisia-handwash", name: "Artemisia Herbal Handwash", category: "Wellness & Health", price: 215, image: "/images/products/handwash.png" },
+    { id: "mugwort-oil", name: "Mugwort Essential Oil (50ml)", category: "Essential Oils", price: 1400, image: "/images/products/oil.png" },
+    { id: "titepati-soap", name: "Titepati Healing Soap", category: "Cosmetics", price: 120, image: "/images/products/titepati-soap.jpg" },
+    { id: "titepati-soap-bundle-3", name: "Titepati Soap Bundle (3-Pack)", category: "Cosmetics", price: 320, image: "/images/products/titepati-soap.jpg" },
+    { id: "titepati-soap-bundle-6", name: "Titepati Soap Bundle (6-Pack)", category: "Cosmetics", price: 600, image: "/images/products/titepati-soap.jpg" },
+    { id: "herbal-cosmetics-set", name: "Titepati Herbal Cosmetics Set", category: "Cosmetics", price: 450, image: "/images/products/herbal-cosmetics.jpg" },
 ]
 
 interface SearchOverlayProps {
