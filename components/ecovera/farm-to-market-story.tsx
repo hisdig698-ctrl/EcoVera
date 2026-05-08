@@ -51,27 +51,27 @@ interface TeamMember {
 
 const teamMembers: TeamMember[] = [
   {
-    name: "Co-Founder",
-    role: "Founder & Vision",
-    bio: "Leading the regenerative movement",
-    image: "/images/story/team-member-3.jpg"
+    name: "Babita Giri",
+    role: "Co-Founder & COO",
+    bio: "Operations, partnerships & community impact",
+    image: "/images/story/team-member-1.jpg"
   },
   {
-    name: "Operations Lead",
-    role: "Operations",
-    bio: "Ensuring quality & scale",
+    name: "Sandesh Mgr",
+    role: "Co-Founder & CMO",
+    bio: "Marketing, branding & business growth",
     image: "/images/story/team-member-2.jpg"
   },
   {
-    name: "Community Manager",
-    role: "Community Relations",
-    bio: "Farmer partnerships & impact",
+    name: "Siddanta Sodari",
+    role: "Co-Founder & CEO",
+    bio: "Strategy, leadership & product vision",
     image: "/images/story/team-member-3.jpg"
   },
   {
-    name: "Product Specialist",
-    role: "Product Development",
-    bio: "Formulation & quality",
+    name: "Nishan Thapa",
+    role: "Co-Founder & CTO",
+    bio: "Research, innovation & product development",
     image: "/images/story/team-member-4.jpg"
   }
 ]
