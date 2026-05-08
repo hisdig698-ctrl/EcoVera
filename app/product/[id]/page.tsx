@@ -72,7 +72,7 @@ const products: Record<string, ProductData> = {
     },
     price: 150,
     originalPrice: null,
-    image: "/images/products/artemisia-incense.jpg",
+    image: "/images/products/mugwort-incense.jpg",
     sizes: ["Pack of 20"],
     details: {
       en: "Our Artemisia Incense is handcrafted using traditional techniques with pure Titepati leaves. Each stick is carefully prepared to deliver the authentic therapeutic aroma prized in Ayurvedic and spiritual practices. Made from 100% natural Artemisia with no artificial additives.",
@@ -101,7 +101,7 @@ const products: Record<string, ProductData> = {
     },
     price: 850,
     originalPrice: null,
-    image: "/images/products/artemisia-moxa.jpg",
+    image: "/images/products/moxa.png",
     sizes: ["Pack of 10"],
     details: {
       en: "Our Artemisia Moxa is prepared using traditional methods and consists of pure dried mugwort (Titepati). Used in acupuncture therapy and traditional wellness practices for thousands of years, moxa provides warming, therapeutic benefits. Each pack contains 10 premium handcrafted sticks.",
@@ -130,7 +130,7 @@ const products: Record<string, ProductData> = {
     },
     price: 215,
     originalPrice: null,
-    image: "/images/products/artemisia-handwash.jpg",
+    image: "/images/products/handwash.png",
     sizes: ["300ml"],
     details: {
       en: "This premium handwash combines the cleansing power of natural botanicals with the therapeutic benefits of Titepati. Formulated to gently remove dirt and germs while maintaining skin's natural pH balance and preventing dryness. Perfect for daily hand care.",
@@ -159,7 +159,7 @@ const products: Record<string, ProductData> = {
     },
     price: 1400,
     originalPrice: null,
-    image: "/images/products/mugwort-oil.jpg",
+    image: "/images/products/oil.png",
     sizes: ["15ml", "50ml"],
     details: {
       en: "Steam-distilled from freshly harvested Artemisia plants grown on previously underutilized agricultural land. This pure essential oil is highly concentrated and ideal for aromatherapy, custom skincare blends, or traditional holistic remedies. This high-margin product is a prime example of our Phase 2 value creation.",
@@ -188,7 +188,7 @@ const products: Record<string, ProductData> = {
     },
     price: 120,
     originalPrice: null,
-    image: "/images/products/titepati-soap-real.jpg",
+    image: "/images/products/titepati-soap.jpg",
     sizes: ["125g"],
     details: {
       en: "This artisanal soap combines the healing power of Mugwort with traditional Ayurvedic botanicals. It helps soothe irritated skin, reduce inflammation, and combat acne. Every purchase supports our SDG goals of providing natural health products and decent work to rural communities.",
@@ -275,7 +275,7 @@ const products: Record<string, ProductData> = {
     },
     price: 450,
     originalPrice: 550,
-    image: "/images/products/herbal-cosmetics.jpg",
+    image: "/images/products/hand-sanitizer.jpg",
     sizes: ["Standard Bundle"],
     details: {
       en: "This comprehensive set leverages the antioxidant and antimicrobial properties of Titepati to promote a healthy, radiant complexion. Produced through our community-centered farming model, these cosmetics stand at the forefront of the growing global demand for plant-based health solutions.",
