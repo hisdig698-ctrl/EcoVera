@@ -45,22 +45,42 @@ const products = [
   // Cosmetics
   {
     id: "titepati-soap",
-    name: { en: "Titepati Skin Treatment Soap", ne: "टिटेपाटी छाला उपचार साबुन" },
-    description: { en: "Ayurvedic Okhati therapeutic bar", ne: "आयुर्वेदिक ओखति उपचार साबुन" },
-    price: 12,
+    name: { en: "Titepati Healing Soap", ne: "टिटेपाटी निको पार्ने साबुन" },
+    description: { en: "Premium Artemisia soap bar (100g) - Skin treatment & healing", ne: "प्रिमियम आर्टेमिसिया साबुन - छाला उपचार र निको पार्ने" },
+    price: 120,
     originalPrice: null,
     image: "/images/products/titepati-soap.jpg",
     badgeKey: "products.bestseller",
     category: "cosmetics" as Category
   },
   {
+    id: "titepati-soap-bundle-3",
+    name: { en: "Titepati Soap Bundle (3-Pack)", ne: "टिटेपाटी साबुन बन्डल (३ पीस)" },
+    description: { en: "Three premium Artemisia soap bars for complete skin care", ne: "पूर्ण छाला हेरमेलको लागि तीन प्रिमियम आर्टेमिसिया साबुन" },
+    price: 320,
+    originalPrice: 360,
+    image: "/images/products/titepati-soap.jpg",
+    badgeKey: "products.sale",
+    category: "cosmetics" as Category
+  },
+  {
+    id: "titepati-soap-bundle-6",
+    name: { en: "Titepati Soap Bundle (6-Pack)", ne: "टिटेपाटी साबुन बन्डल (६ पीस)" },
+    description: { en: "Six premium Artemisia soap bars - Perfect for family", ne: "छ: प्रिमियम आर्टेमिसिया साबुन - परिवारको लागि आदर्श" },
+    price: 600,
+    originalPrice: 720,
+    image: "/images/products/titepati-soap.jpg",
+    badgeKey: "products.sale",
+    category: "cosmetics" as Category
+  },
+  {
     id: "herbal-cosmetics-set",
     name: { en: "Titepati Herbal Cosmetics Set", ne: "टिटेपाटी जडीबुटी सौन्दर्य सेट" },
-    description: { en: "Complete glow skin toner, face wash, and moisturizer bundle", ne: "पूर्ण ग्लो स्किन टोनर, फेस वाश, र मोइस्चराइजर बन्डल" },
-    price: 85,
-    originalPrice: 110,
+    description: { en: "Complete skincare set with soap, face wash, and toner", ne: "साबुन, फेस वाश, र टोनर सहित पूर्ण छाला सेट" },
+    price: 450,
+    originalPrice: 550,
     image: "/images/products/herbal-cosmetics.jpg",
-    badgeKey: "products.sale",
+    badgeKey: "products.premium",
     category: "cosmetics" as Category
   }
 ]

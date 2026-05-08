@@ -56,6 +56,12 @@ export function Header() {
               {t('nav.about')}
             </Link>
             <Link
+              href="/info"
+              className="text-sm tracking-wide text-foreground/70 hover:text-foreground ecovera-transition"
+            >
+              Vision
+            </Link>
+            <Link
               href="/ingredients"
               className="text-sm tracking-wide text-foreground/70 hover:text-foreground ecovera-transition"
             >
@@ -175,6 +181,13 @@ export function Header() {
               onClick={() => setIsMenuOpen(false)}
             >
               {t('nav.about')}
+            </Link>
+            <Link
+              href="/info"
+              className="text-sm tracking-wide text-foreground/70 hover:text-foreground ecovera-transition"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Vision
             </Link>
             <Link
               href="/ingredients"

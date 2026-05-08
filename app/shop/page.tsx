@@ -42,25 +42,45 @@ const products = [
     badge: "Premium",
     category: "essential-oils"
   },
-  // Cosmetics
+  // Cosmetics - Soaps
   {
     id: "titepati-soap",
-    name: "Titepati Skin Treatment Soap",
-    description: "Ayurvedic Okhati therapeutic bar",
-    price: 12,
+    name: "Titepati Healing Soap",
+    description: "Premium Artemisia soap bar (100g) - Skin treatment & healing",
+    price: 120,
     originalPrice: null,
     image: "/images/products/titepati-soap.jpg",
     badge: "Bestseller",
     category: "cosmetics"
   },
   {
+    id: "titepati-soap-bundle-3",
+    name: "Titepati Soap Bundle (3-Pack)",
+    description: "Three premium Artemisia soap bars for complete skin care",
+    price: 320,
+    originalPrice: 360,
+    image: "/images/products/titepati-soap.jpg",
+    badge: "Save ₹40",
+    category: "cosmetics"
+  },
+  {
+    id: "titepati-soap-bundle-6",
+    name: "Titepati Soap Bundle (6-Pack)",
+    description: "Six premium Artemisia soap bars - Perfect for family",
+    price: 600,
+    originalPrice: 720,
+    image: "/images/products/titepati-soap.jpg",
+    badge: "Save ₹120",
+    category: "cosmetics"
+  },
+  {
     id: "herbal-cosmetics-set",
     name: "Titepati Herbal Cosmetics Set",
-    description: "Complete glow skin toner, face wash, and moisturizer bundle",
-    price: 85,
-    originalPrice: 110,
+    description: "Complete skincare set with soap, face wash, and toner",
+    price: 450,
+    originalPrice: 550,
     image: "/images/products/herbal-cosmetics.jpg",
-    badge: "Sale",
+    badge: "Complete Kit",
     category: "cosmetics"
   }
 ]

@@ -10,28 +10,30 @@ export function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/himalayan-nature-cta.png"
-          alt="Artemisia products"
+          src="/images/hero-banner.jpg"
+          alt="EcoVera Artemisia Fields"
           fill
           className="object-cover"
           priority
         />
+        {/* Dark overlay for better text contrast */}
+        <div className="absolute inset-0 bg-black/40" />
         {/* Bottom fade gradient */}
-        <div className="absolute bottom-0 left-0 right-0 h-[60%] bg-gradient-to-t from-background via-background/50 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-[60%] bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 w-full pt-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="w-full lg:max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
-            <span className="text-sm uppercase mb-6 block text-foreground animate-blur-in opacity-0 tracking-normal" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
+            <span className="text-sm uppercase mb-6 block text-white/90 animate-blur-in opacity-0 tracking-normal font-semibold" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
               EcoVera Artemisia™ BioSolution
             </span>
-            <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.1] mb-6 text-balance text-foreground">
+            <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.1] mb-6 text-balance text-white">
               <span className="block animate-blur-in opacity-0 font-semibold" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>Empowering Farmers.</span>
               <span className="block animate-blur-in opacity-0 font-semibold xl:text-8xl text-5xl sm:text-6xl md:text-7xl" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>Healing Naturally.</span>
             </h2>
-            <p className="text-lg leading-relaxed mb-10 max-w-md mx-auto lg:mx-0 text-foreground animate-blur-in opacity-0" style={{ animationDelay: '0.8s', animationFillMode: 'forwards' }}>
+            <p className="text-lg leading-relaxed mb-10 max-w-md mx-auto lg:mx-0 text-white/85 animate-blur-in opacity-0" style={{ animationDelay: '0.8s', animationFillMode: 'forwards' }}>
               A sustainable agribusiness transforming underutilized rural resources into premium, health-oriented Artemisia products.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-blur-in opacity-0" style={{ animationDelay: '1s', animationFillMode: 'forwards' }}>
@@ -48,10 +50,10 @@ export function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-foreground">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/70">
         <span className="text-xs tracking-widest uppercase font-bold">Scroll</span>
-        <div className="w-px h-12 bg-foreground/20 relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-1/2 bg-foreground/60 animate-pulse" />
+        <div className="w-px h-12 bg-white/20 relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-1/2 bg-white/60 animate-pulse" />
         </div>
       </div>
     </section >
