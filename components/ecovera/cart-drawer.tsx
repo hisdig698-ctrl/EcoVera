@@ -1,6 +1,6 @@
 "use client"
 
-import { Minus, Plus, Trash2, ShoppingBag, X } from "lucide-react"
+import { Minus, Plus, Trash2, ShoppingBag, X, MessageCircle } from "lucide-react"
 import Image from "next/image"
 import { toast } from "sonner"
 import {
@@ -22,8 +22,21 @@ export function CartDrawer() {
   const shipping = 0
   const total = subtotal + shipping
 
+  const buildWhatsAppUrl = () => {
+    const phone = "9779765662427" // +977 Nepal country code
+    const lines = items.map(
+      (item) =>
+        `• ${item.name} ×${item.quantity} — Rs. ${item.price * item.quantity}`
+    )
+    const message =
+      `Hello EcoVera! 🌿 I'd like to place an order:\n\n` +
+      lines.join("\n") +
+      `\n\n*Total: Rs. ${total}*\n\nPlease confirm my order. Thank you!`
+    return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`
+  }
+
   const handleCheckout = () => {
-    toast.success("Checkout coming soon! We're setting up secure payments.", {
+    toast.info("Online checkout coming soon! Use WhatsApp to order now.", {
       duration: 4000,
     })
   }
@@ -134,13 +147,27 @@ export function CartDrawer() {
               </div>
             </div>
 
-            {/* Checkout Button */}
+            {/* WhatsApp Order Button */}
+            <a
+              href={buildWhatsAppUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full inline-flex items-center justify-center gap-2 bg-[#25D366] text-white py-4 rounded-full font-medium hover:bg-[#1ebe5d] ecovera-transition"
+            >
+              <MessageCircle className="w-5 h-5" />
+              Order via WhatsApp
+            </a>
+
+            {/* Checkout Button (Coming Soon) */}
             <button
               type="button"
               onClick={handleCheckout}
-              className="w-full bg-primary text-primary-foreground py-4 rounded-full font-medium hover:bg-primary/90 ecovera-transition"
+              className="w-full relative border border-border text-foreground/50 py-4 rounded-full font-medium cursor-not-allowed ecovera-transition"
             >
               {t("cart.checkout")}
+              <span className="absolute -top-2 -right-1 text-[10px] tracking-wide bg-primary/10 text-primary px-2 py-0.5 rounded-full border border-primary/20">
+                Coming Soon
+              </span>
             </button>
 
             <DrawerClose asChild>
