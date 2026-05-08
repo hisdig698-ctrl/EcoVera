@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Instagram, Facebook, Twitter } from "lucide-react"
+import { Linkedin } from "lucide-react"
 import { useLanguage } from "./language-context"
 
 const getFooterLinks = (t: (key: string) => string) => ({
@@ -47,31 +47,13 @@ export function Footer() {
             </p>
             <div className="flex gap-4">
               <a
-                href="https://instagram.com"
+                href="https://www.linkedin.com/in/ecovera-artemisia%E2%84%A2-biosolution-0151813b4/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-background flex items-center justify-center text-foreground/60 hover:text-foreground ecovera-transition ecovera-shadow"
-                aria-label="Instagram"
+                aria-label="LinkedIn"
               >
-                <Instagram className="w-4 h-4" />
-              </a>
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-background flex items-center justify-center text-foreground/60 hover:text-foreground ecovera-transition ecovera-shadow"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-4 h-4" />
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-background flex items-center justify-center text-foreground/60 hover:text-foreground ecovera-transition ecovera-shadow"
-                aria-label="Twitter"
-              >
-                <Twitter className="w-4 h-4" />
+                <Linkedin className="w-4 h-4" />
               </a>
             </div>
           </div>
