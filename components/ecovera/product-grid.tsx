@@ -49,7 +49,7 @@ const products = [
     description: { en: "Premium Artemisia soap bar (100g) - Skin treatment & healing", ne: "प्रिमियम आर्टेमिसिया साबुन - छाला उपचार र निको पार्ने" },
     price: 120,
     originalPrice: null,
-    image: "/images/products/titepati-soap.jpg",
+    image: "/images/products/titepati-soap-real.jpg",
     badgeKey: "products.bestseller",
     category: "cosmetics" as Category
   },
@@ -59,7 +59,7 @@ const products = [
     description: { en: "Three premium Artemisia soap bars for complete skin care", ne: "पूर्ण छाला हेरमेलको लागि तीन प्रिमियम आर्टेमिसिया साबुन" },
     price: 320,
     originalPrice: 360,
-    image: "/images/products/titepati-soap.jpg",
+    image: "/images/products/titepati-soap-real.jpg",
     badgeKey: "products.sale",
     category: "cosmetics" as Category
   },
@@ -69,7 +69,7 @@ const products = [
     description: { en: "Six premium Artemisia soap bars - Perfect for family", ne: "छ: प्रिमियम आर्टेमिसिया साबुन - परिवारको लागि आदर्श" },
     price: 600,
     originalPrice: 720,
-    image: "/images/products/titepati-soap.jpg",
+    image: "/images/products/titepati-soap-real.jpg",
     badgeKey: "products.sale",
     category: "cosmetics" as Category
   },
